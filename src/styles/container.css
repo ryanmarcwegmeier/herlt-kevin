@@ -1,0 +1,217 @@
+body {
+    font-family: 'Open Sans', sans-serif !important;
+  }
+  
+
+.flexrow{
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.flexcol1{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1;
+}
+
+.flexcol2{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 2;
+}
+
+.flexcol3{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 3;
+}
+
+.flexcol4{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 4;
+}
+
+.flexcol5{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 5;
+}
+
+.flexcol6{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 3;
+}
+.flexcol7{
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 7;
+}
+
+.flexcol8{
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 8;
+}
+
+.flexcol9{
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 9;
+}
+
+.flexcol10{
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 10;
+}
+
+.flexcol11{
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 11;
+}
+
+.flexcol12{
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 12;
+}
+
+.flexcol13{
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 14;
+}
+
+.flex-h-center{
+    align-items: center !important;
+}
+.flex-v-center{
+    justify-content: center !important;
+}
+
+.h-56{
+    height: 56px !important;
+}
+
+.b{
+    border: 1px solid black;
+}
+
+.mt56{
+    margin-top: 56px;
+}
+
+.introLogo{
+    width: 100% !important;
+    max-width: 700px;
+    min-width: 300px;
+}
+
+.introText{
+    width: 90% !important;
+}
+
+.introMargin{
+    margin-top: 100px;
+}
+
+.arrowDown{
+    margin-top: calc(45vh);
+    height: 40vh;
+}
+
+.flex-v-end{
+    justify-content: end;
+}
+
+
+
+.progress{
+    height: 10px;
+  }
+
+  .progress-bar-striped{
+      background-image: linear-gradient(45deg,rgba(78, 3, 3, 0) 25%,transparent 25%,#ff2e2e00 50%,rgba(255,255,255,.15) 50%,rgba(0, 0, 0, 0) 60%,transparent 75%,transparent) !important;
+      background-size: 1rem 1rem !important;
+  }
+
+  .progress-bar {
+    background: #222;
+    width: 0;
+    -webkit-animation: progress 1.5s ease-in-out forwards;
+            animation: progress 1.5s ease-in-out forwards;
+  }
+  .progress-bar .title {
+    opacity: 0;
+    -webkit-animation: show 0.35s forwards ease-in-out 0.5s;
+            animation: show 0.35s forwards ease-in-out 0.5s;
+  }
+  
+  @-webkit-keyframes progress {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes progress {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @-webkit-keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .rotation{
+    transform: rotate(-90deg);
+    font-family: Lato, Helvetica, Roboto, sans-serif !important;
+    color: black;
+    letter-spacing: 3px;
+  }
+
+  a:hover {
+    text-decoration: none !important;
+  }
+
+  a:hover div{
+    border-bottom: 1px solid black !important;
+
+    padding-bottom: 3px !important;
+  }
+
+
+
+
+  .spacebtw{
+      justify-content: space-between;
+  }
+
+
+
+  
+    
+    
+

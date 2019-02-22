@@ -5,6 +5,7 @@ import Hometime from './Hometime';
 import References from './References';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { configureAnchors } from 'react-scrollable-anchor'
+import Footer from '../../component/Footer';
  
 // Offset all anchors by -60 to account for a fixed header
 // and scroll more quickly than the default 400ms
@@ -21,12 +22,14 @@ export default class Home extends Component{
       render(){
           return (
             <div>
+            
 
+            <div className="container-fluid" style={{position:'relative', background:'white',zIndex:100}}>
 
-            <ScrollableAnchor id={'about'}>
+                <ScrollableAnchor id={'about'}>
 
                 <HomeIntro></HomeIntro>
-            </ScrollableAnchor>
+                </ScrollableAnchor>
                 <Homeskill></Homeskill>
                 
                 <Hometime></Hometime>
@@ -35,6 +38,10 @@ export default class Home extends Component{
                 <References imagearray={this.props.imagearray} prints={this.props.prints} blender={this.props.blender}></References>
 
                 </ScrollableAnchor>
+
+                </div>
+
+                <Footer></Footer>
             </div>
           )
       }

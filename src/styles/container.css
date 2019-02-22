@@ -210,8 +210,24 @@ body {
   }
 
 
+  .footerNav{
 
-  
+    z-index:1 !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100%;
+    background:#121212
+  }
+
+
+  .footerNav p {
+
+    z-index:1 !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100%;
+  }
+
     
     
 

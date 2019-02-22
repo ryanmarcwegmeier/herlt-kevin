@@ -18,11 +18,7 @@ export default class HomeIntro extends Component {
                     <section className="introText">
                         <h2 className="mb-5">I‘m <b>Kevin Herlt</b></h2>
                         <p style={{lineHeight:'2em'}}>
-                            I‘m a mediadesigner with a love for detail and passion. I learned the
-                            profession of mediadesigner in the company Euphorika in Hamburg/
-                            Germany. On this website I‘ll show you a little insight into my creative
-                            and kinda weird world. I also explain what my hard- and softskills are
-                            and what else I experienced on my professional course.
+                        I‘m a mediadesigner with passion and love for detail. I learned the profession of mediadesigner in the company Euphorika in Hamburg/ Germany. On this website I‘ll show you a little insight into my creative life. I also explain what my professional- and softskills are and what else I experienced in the beginning of my professional career.
                             
                         </p>
                         <p>

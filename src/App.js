@@ -113,7 +113,7 @@ class App extends Component {
   render() {    
     return (
       <BrowserRouter>
-        <div className="container-fluid">
+        <div className="">
           <Header toggle={this.toggle}></Header>
 
 
@@ -163,6 +163,7 @@ class App extends Component {
       
 
             <main className="flexcol13 mt56" style={{position:'relative'}}>
+            <Route exact path='/' render={(props) => <Home {...props}  imagearray={this.state.imagearray} prints={this.state.prints} blender={this.state.blender} />}/>
             <Route exact path='/index' render={(props) => <Home {...props}  imagearray={this.state.imagearray} prints={this.state.prints} blender={this.state.blender} />}/>
             <Route exact path='/contact' render={(props) => <Contact {...props}  />}/>
             

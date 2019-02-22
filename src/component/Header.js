@@ -32,7 +32,7 @@ export default class Header extends Component{
                             
                             </div>
                         </div>
-                        <div className="flexcol1 flex-h-center flex-v-center title text-right">
+                        <div className="flexcol1 flex-h-center pr-4 flex-v-center title text-right">
                         MEDIADESIGNER DIGITAL AND PRINT
                         </div>
                     </div>

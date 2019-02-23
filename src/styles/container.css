@@ -5,8 +5,19 @@ body {
 
 .flexrow{
     display: flex !important;
+    flex-direction: column !important;
+}
+
+@media screen and (min-width:756px){
+  .paddingleft{
+    margin-left: 47px; 
+  }
+
+  .flexrow{
+    display: flex !important;
     flex-direction: row !important;
 }
+
 
 .flexcol1{
     display: flex !important;
@@ -85,11 +96,14 @@ body {
   flex: 14;
 }
 
+
 .flex-h-center{
     align-items: center !important;
 }
 .flex-v-center{
     justify-content: center !important;
+}
+
 }
 
 .h-56{
@@ -101,7 +115,7 @@ body {
 }
 
 .mt56{
-    margin-top: 56px;
+  top:56px;
 }
 
 .introLogo{
@@ -211,12 +225,11 @@ body {
 
 
   .footerNav{
-
     z-index:1 !important;
     position: fixed !important;
     bottom: 0 !important;
     width: 100%;
-    background:#121212
+    background:#090909
   }
 
 
@@ -228,6 +241,161 @@ body {
     width: 100%;
   }
 
-    
+  
     
 
+  .selected{
+    border-bottom: 1px solid black;
+  }
+
+  @media screen and (max-width: 755px) {
+    .selected{
+      border-bottom: 1px solid white;
+    }
+    .flexrow{
+      display: flex !important;
+      
+  }
+  
+  
+  .flexcol1{
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1;
+  }
+  
+  .flexcol2{
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 2;
+  }
+  
+  .flexcol3{
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 3;
+  }
+  
+  .flexcol4{
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 4;
+  }
+  
+  .flexcol5{
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 5;
+  }
+  
+  .flexcol6{
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 3;
+  }
+  .flexcol7{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 7;
+  }
+  
+  .flexcol8{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 8;
+  }
+  
+  .flexcol9{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 9;
+  }
+  
+  .flexcol10{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 10;
+  }
+  
+  .flexcol11{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 11;
+  }
+  
+  .flexcol12{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 12;
+  }
+  
+  .flexcol13{
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 14;
+  }
+  
+  
+  .flex-h-center{
+      align-items: center !important;
+  }
+  .flex-v-center{
+      justify-content: center !important;
+  }
+
+
+
+
+
+    .pl-3{
+      padding-left: 0 !important;
+    }
+
+    .pr-3{
+      padding-right: 0 !important;
+    }
+
+    .pl-4{
+      padding-left: 0 !important;
+    }
+
+    .pr-4{
+      padding-right: 0 !important;
+    }
+
+    .overfl{
+      overflow: hidden !important;
+    }
+
+    
+  }
+      .__react_modal_image__header{
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        overflow: hidden !important;
+        margin-top:56px;
+      }
+
+  .smallNav a {
+    color: #FFFFFF;
+    text-decoration: none !important;
+  }
+
+  .smallNav a span {
+    display: block;
+  }
+    
+
+
+
+ nav a, a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
+
+
+
+.headlines{
+  border-bottom: 1px solid black !important;
+}

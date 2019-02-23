@@ -11,10 +11,10 @@ export default class Hometime extends Component {
 
             <Zoom>
 
-            <div className=" mt-5 pt-5">
+            <div className=" mt-5 pt-5 pb-5 mb-3">
 
             <div className="">
-            <h3 className="headlines">CAREER
+            <h3 className="mb-3"><span className="headlines">CAREER</span>
             </h3>
             </div>
             

@@ -16,12 +16,21 @@ export default class Header extends Component{
     render(){
         return(
             <div className="flexrow position-fixed w-100" style={{background:'white', position:"fixed", zIndex:1000}}>
-                <div className="flexcol3 flex-v-center">
-                    <img src={logo} className='logo' onClick={this.props.toggle} style={{cursor:'pointer'}}></img>
+                <div className="flexcol3 flex-v-center" style={{minHeight:'56px'}}>
+                <div>
+
+                    <img src={logo} className='logo' style={{float:'left'}}></img>
+                    {this.props.width<756 &&
+                    <span className="fas fa-bars h4 pr-2 mr-2" style={{cursor:'pointer',position:'fixed', right:0}} onClick={this.props.toggle}></span>
+                    }
+                </div>
                 </div>
                 <div className="flexcol1 flex-v-center flex-h-center title">
-                    <span className="title">KEVIN HERLT</span>
+                    <span className="title"><span>DE</span>|<span>EN</span></span>
                 </div>
+                {this.props.width>=756
+                &&
+
                 <div className="flexcol3">
                     <div className="flexrow">
                         <div className="flexcol1 h-56  ">
@@ -37,6 +46,7 @@ export default class Header extends Component{
                         </div>
                     </div>
                 </div>
+                }
             </div>
 
         );

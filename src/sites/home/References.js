@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../../styles/container.css'
 
 export default class References extends Component{
     constructor(props){
@@ -7,9 +8,9 @@ export default class References extends Component{
 
     render(){
         return(
-            <div className="pb-2">
+            <div className="pb-2 pt-5">
 
-                <div className=""><h3 className="">References </h3></div>
+                <div className=""><h3 className=""><span className="headlines">REFERENCES</span> </h3></div>
                 <p>
                 Now I want to present you a small selection of my work from logos, print-, digitalproducts and  3D graphics created with Photoshop, Illustartor, InDesign and Blender.
                 </p>

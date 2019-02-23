@@ -11,7 +11,7 @@ export default class Homeskill extends Component {
     render(){
         return(
             <div>
-                <h3 className="headlines">SKILLBAR </h3>
+                <h3 className=""><span className="headlines">SKILLBAR</span> </h3>
 
             <div className="mt-4 mb-2"><b className="">Hard Skills</b></div>
 

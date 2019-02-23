@@ -10,8 +10,8 @@ export default class Footer extends Component {
 
     render(){
         return(
-            <footer>
-                <div style={{marginTop:'200px'}}> 
+            <footer className="container-fluid">
+                <div className="container-fluid" style={{marginTop:'200px'}}> 
 
                 </div>
                 <div className="footerNav text-center" style={{height:'200px'}} >

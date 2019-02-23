@@ -145,6 +145,11 @@ class App extends Component {
   }
 
 componentDidMount() {
+
+  if(this.state.path=='/'){
+    this.setState({path:"/index"})
+  }
+
     window.addEventListener("resize", this.updateDimensions);
 }
 
@@ -190,7 +195,7 @@ componentDidMount() {
 
 <div className="flexcol1 flex-v-center flex-h-center ">
                 <NavLink exact to="/index#about" onClick={this.goToAbout}>
-                {(this.state.path=='/' || this.state.path=='/index' || this.state.path=='/index#about' )
+                {(this.state.path=='/' || this.state.path=='/index' || this.state.path=='/index#about' || this.state.path=='/#about' )
                 ?
                 <div className="rotation selected">About</div>
                 :
@@ -205,7 +210,7 @@ componentDidMount() {
                 
                 <div className="flexcol1 flex-v-center flex-h-center ">
                 <NavLink exact to="/index#references"   onClick={this.goToReferences}>
-                {(this.state.path=='/index#references')
+                {(this.state.path=='/index#references' || this.state.path=='/#references')
                 ?
                 <div className="rotation selected">References</div>
                 :
@@ -246,7 +251,7 @@ componentDidMount() {
 
                   <div className="mt-4 p-3" style={{display:'block'}}>
                   <NavLink exact to="/index#about" style={{display:'inline-block'}}>
-                  {(this.state.path=='/' || this.state.path=='/index' || this.state.path=='/index#about' )
+                  {(this.state.path=='/' || this.state.path=='/index' || this.state.path=='/index#about' || this.state.path=='/#about' )
                 ?
                 <span className="selected"  onClick={this.goToAbout}>About</span>
                 :
@@ -258,7 +263,7 @@ componentDidMount() {
                   <div className=" p-3" style={{display:'block'}}>
                   <NavLink exact to="/index#references"  style={{display:'inline-block'}}>
 
-                    {this.state.path=='/index#references'
+                    {(this.state.path=='/index#references'||this.state.path=='/#references')
                     ?
                     <span className="selected"  onClick={this.goToReferences}>References</span>
                     :

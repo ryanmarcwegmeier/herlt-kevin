@@ -6,7 +6,7 @@ import References from './References';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { configureAnchors } from 'react-scrollable-anchor'
 import Footer from '../../component/Footer';
-
+import ImageModal from '../../component/ImageModal';
 import { goToAnchor } from 'react-scrollable-anchor'
 
 
@@ -22,12 +22,20 @@ export default class Home extends Component{
         super(props);
         
         this.state={
-            path:this.props.path
+            path:this.props.path,
+            imgUrl:"",
+            imgDes:"",
+            imgTitle:"",
         }
 
         configureAnchors({offset: -60, scrollDuration: 200})
 
         this.handleScroll = this.handleScroll.bind(this);
+        this.handleImageModal = this.handleImageModal.bind(this);
+    }
+
+    handleImageModal(title,describtion,url){
+        this.setState({imgUrl:url,imgTitle:title,imgDes:describtion});
     }
 
     handleScroll(){
@@ -56,7 +64,10 @@ export default class Home extends Component{
             <div>
             
 
-            <div className="container-fluid" style={{position:'relative', background:'white',zIndex:100}}>
+<ImageModal imgTitle={this.props.imgTitle} imgUrl={this.props.imgUrl} imgDes={this.props.imgDes}></ImageModal>
+
+            <div className="container-fluid" style={{position:'relative',background:'white',zIndex:100}}>
+            
 
                 <ScrollableAnchor id={'about'}>
                 <div>

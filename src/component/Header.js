@@ -16,6 +16,7 @@ export default class Header extends Component{
     render(){
         return(
             <div className="flexrow position-fixed w-100" style={{background:'white', position:"fixed", zIndex:1000}}>
+            
                 <div className="flexcol3 flex-v-center" style={{minHeight:'56px'}}>
                 <div>
 

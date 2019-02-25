@@ -8,7 +8,7 @@ export default class References extends Component{
 
     render(){
         return(
-            <div className="pb-2 pt-5">
+            <div className="pb-2 pt-5 container-fluid">
 
                 <div className=""><h3 className=""><span className="headlines">REFERENCES</span> </h3></div>
                 <p>

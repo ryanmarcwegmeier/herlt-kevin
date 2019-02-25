@@ -19,7 +19,7 @@ import './styles/container.css'
 import logo from './images/kevin-logo.png';
 
 
-
+import imageArray from "./images/images.json"
 
 
 function importAll(r) {
@@ -32,48 +32,34 @@ const printimages = importAll(require.context('./images/Print', false, /\.(png|j
 const blenderimages = importAll(require.context('./images/Blender', false, /\.(png|jpe?g|svg)$/));
 
 
-function createListView(links, cols){
+/* function createListView(links, cols){
   let rows = links.length/cols
   let array = []
   while (rows>=0){
     let flexcol = [];
-    for(let col = 0; col < cols; col++){
-      
+    for(let col = 0; col < cols; col++){     
       let x1 = null;
-
       if(links.length>0){
         x1 = links.shift();
       }
-
-
       flexcol.push(
         (x1!=null) ?
         <div key={x1}  className="flexcol1">
-          <ModalImage small={x1} large={x1} alt="hier kommt der text zu den bildern"/>        
+          <img onClick={()=>this.handleImageModal(x1,x1,x1)}  data-toggle="modal" data-target="#exampleModal" src={x1}></img>
         </div>
         :
         <div key={rows+'-'+col} className="flexcol1"></div>
-      );
-
-      
+      ); 
     }
-
     array.push(
       <div key={rows} className="flexrow"> 
         {flexcol}
       </div>
     )
-
-
-
-
     rows--;
   }
-
   return array;
-
-}
-
+} */
 
 
 class App extends Component {
@@ -91,6 +77,10 @@ class App extends Component {
       height:0,
       path:window.location.pathname+window.location.hash,
 
+      imgUrl:"",
+      imgDes:"",
+      imgTitle:"",
+
     }
 
     this.toggle = this.toggle.bind(this)
@@ -99,11 +89,43 @@ class App extends Component {
     this.goToPath = this.goToPath.bind(this)
     this.updateDimensions = this.updateDimensions.bind(this)
     this.setPath = this.setPath.bind(this)
+    this.handleImageModal = this.handleImageModal.bind(this);
+    this.createListView = this.createListView.bind(this)
+  }
 
+  handleImageModal(title,describtion,url){
+      this.setState({imgUrl:url,imgTitle:title,imgDes:describtion});
   }
 
 
-  
+  createListView(links, cols){
+    let rows = links.length/cols
+    let array = []
+    while (rows>=0){
+      let flexcol = [];
+      for(let col = 0; col < cols; col++){     
+        let x1 = null;
+        if(links.length>0){
+          x1 = links.shift();
+        }
+        flexcol.push(
+          (x1!=null) ?
+          <div key={x1}  className="col-4 m-0 p-0">
+            <img onClick={()=>this.handleImageModal(x1,x1,x1)}  data-toggle="modal" data-target="#exampleModal" src={x1} style={{width:'100%'}}></img>
+          </div>
+          :
+          <div key={rows+'-'+col} className="col-4 m-0 p-0"></div>
+        ); 
+      }
+      array.push(
+        <div key={rows} className="row"> 
+          {flexcol}
+        </div>
+      )
+      rows--;
+    }
+    return array;
+  }
   
   
   setPath(path){
@@ -145,6 +167,8 @@ class App extends Component {
   }
 
 componentDidMount() {
+  this.setState({width: window.innerWidth, height: window.innerHeight});
+
 
   if(this.state.path=='/'){
     this.setState({path:"/index"})
@@ -156,25 +180,32 @@ componentDidMount() {
 
   componentWillMount(){
 
-    this.updateDimensions();
+      
 
-  
+    this.setState({imagearray:this.createListView(images,3)})
 
-    this.setState({imagearray:createListView(images,3)})
 
-    this.setState({prints:createListView(printimages,3)})
+
+    /* this.setState({prints:this.createListView(printimages,3)})
     
-    this.setState({blender:createListView(blenderimages,3)})
+    this.setState({blender:this.createListView(blenderimages,3)}) */
   }
 
 
-  render() {    
+  render() {  
+    console.log(this.state.imagearray);
+
     return (
       <BrowserRouter>
         <div className="">
+
+
+
         {
           (this.state.isnavtoggled==true)?
           <div style={{visibility:'hidden'}}>
+
+          
 
           <Header width={this.state.width} toggle={this.toggle}></Header>
         </div>
@@ -197,9 +228,9 @@ componentDidMount() {
                 <NavLink exact to="/index#about" onClick={this.goToAbout}>
                 {(this.state.path=='/' || this.state.path=='/index' || this.state.path=='/index#about' || this.state.path=='/#about' )
                 ?
-                <div className="rotation selected">About</div>
+                <div className="rotation selected">ABOUT</div>
                 :
-                <div className="rotation">About</div>
+                <div className="rotation">ABOUT</div>
 
               }
 
@@ -212,9 +243,9 @@ componentDidMount() {
                 <NavLink exact to="/index#references"   onClick={this.goToReferences}>
                 {(this.state.path=='/index#references' || this.state.path=='/#references')
                 ?
-                <div className="rotation selected">References</div>
+                <div className="rotation selected">REFERENCES</div>
                 :
-                <div className="rotation">References</div>
+                <div className="rotation">REFERENCES</div>
 
               }
                 </NavLink>
@@ -226,9 +257,9 @@ componentDidMount() {
                 <NavLink exact to="/contact"   onClick={()=>this.goToPath('/contact')}>
                   {(this.state.path=='/contact')
                   ?
-                  <div className="rotation selected">Contact</div>
+                  <div className="rotation selected">CONTACT</div>
                   :
-                  <div className="rotation">Contact</div>
+                  <div className="rotation">CONTACT</div>
 
                   }                
                   </NavLink>
@@ -253,9 +284,9 @@ componentDidMount() {
                   <NavLink exact to="/index#about" style={{display:'inline-block'}}>
                   {(this.state.path=='/' || this.state.path=='/index' || this.state.path=='/index#about' || this.state.path=='/#about' )
                 ?
-                <span className="selected"  onClick={this.goToAbout}>About</span>
+                <span className="selected"  onClick={this.goToAbout}>ABOUT</span>
                 :
-                <span onClick={this.goToAbout}>About</span>
+                <span onClick={this.goToAbout}>ABOUT</span>
               }
                   </NavLink>
                   </div>
@@ -265,9 +296,9 @@ componentDidMount() {
 
                     {(this.state.path=='/index#references'||this.state.path=='/#references')
                     ?
-                    <span className="selected"  onClick={this.goToReferences}>References</span>
+                    <span className="selected"  onClick={this.goToReferences}>REFERENCES</span>
                     :
-                    <span  onClick={this.goToReferences}>References</span>
+                    <span  onClick={this.goToReferences}>REFERENCES</span>
                     }
 
                   </NavLink>
@@ -277,11 +308,37 @@ componentDidMount() {
               <NavLink exact to="/contact" style={{display:'inline-block'}} onClick={()=>this.goToPath('/contact')}>
                 {this.state.path=='/contact'
                 ?
-                <span className="selected"  onClick={this.toggle}>Contact</span>
+                <span className="selected"  onClick={this.toggle}>CONTACT</span>
                 :
-                <span  onClick={this.toggle}>Contact</span>
+                <span  onClick={this.toggle}>CONTACT</span>
+}              </NavLink>
+
+</div>
+<div className=" p-3" style={{display:'block'}}>
+
+              <NavLink exact to="/privacypolicy" style={{display:'inline-block'}} onClick={()=>this.goToPath('/privacypolicy')}>
+                {this.state.path=='/privacypolicy'
+                ?
+                <span className="selected"  onClick={this.toggle}>PRIVACYPOLICY</span>
+                :
+                <span  onClick={this.toggle}>PRIVACYPOLICY</span>
+}              </NavLink>
+</div>
+<div className=" p-3" style={{display:'block'}}>
+
+
+              <NavLink exact to="/imprint" style={{display:'inline-block'}} onClick={()=>this.goToPath('/imprint')}>
+                {this.state.path=='/imprint'
+                ?
+                <span className="selected"  onClick={this.toggle}>IMPRINT</span>
+                :
+                <span  onClick={this.toggle}>IMPRINT</span>
 }              </NavLink>
               </div>
+              </div>
+
+              <div className="h5" style={{position:'fixed',bottom:0, left:'calc(50vw - 59.02px / 2)'}}>
+                <span>DE</span>|<span>EN</span>
               </div>
             </nav>
             }
@@ -294,7 +351,7 @@ componentDidMount() {
       
 
             <main className={!this.state.isnavtoggled?"flexcol13 mt56 paddingleft":'flexcol13 mt56 paddingleft '} style={{position:'relative'}}>
-            <Route exact path='/' render={(props) => <Home {...props} setPath={this.setPath} width={this.state.width}  imagearray={this.state.imagearray} prints={this.state.prints} blender={this.state.blender} />}/>
+            <Route exact path='/' render={(props) => <Home {...props} imgUrl={this.state.imgUrl} imgDes={this.state.imgDes} imgTitle={this.state.imgTitle} setPath={this.setPath} width={this.state.width}  imagearray={this.state.imagearray} prints={this.state.prints} blender={this.state.blender} />}/>
             <Route exact path='/index' render={(props) => <Home {...props} setPath={this.setPath} width={this.state.width}  imagearray={this.state.imagearray} prints={this.state.prints} blender={this.state.blender} />}/>
             <Route exact path='/contact' render={(props) => <Contact {...props} setPath={this.setPath} width={this.state.width}  />}/>
             

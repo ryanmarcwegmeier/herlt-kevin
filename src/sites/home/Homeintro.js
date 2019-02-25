@@ -9,7 +9,7 @@ export default class HomeIntro extends Component {
         <div className="Intro">
 
 {this.props.width>=756 ?
-            <div className="flexrow " style={{height:'100%',minHeight:'300px'}}>
+            <div className="flexrow " style={{height:'100vh',minHeight:'500px'}}>
                 <div className="flexcol5 flex-h-center flex-v-center">
                     <img src={logo} className="introLogo"></img>
 
@@ -37,9 +37,9 @@ export default class HomeIntro extends Component {
             </div>
 
                  :
-                 <div className="flexrow " style={{height:'100vh'}}>
+                 <div className="flexrow " style={{height:'100vh', minHeight:'500px'}}>
                  <div className="flexcol5 mt-3 flex-h-center">
-                    <section className="introText">
+                    <section className="introText marginTop">
                         <h2 className="mb-5">I‘m <b>Kevin Herlt</b></h2>
                         <p style={{lineHeight:'2em'}}>
                         I‘m a mediadesigner with passion and love for detail. I learned the profession of mediadesigner in the company Euphorika in Hamburg/ Germany. On this website I‘ll show you a little insight into my creative life. I also explain what my professional- and softskills are and what else I experienced in the beginning of my professional career.

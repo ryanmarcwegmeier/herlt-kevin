@@ -7,11 +7,11 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 import { configureAnchors } from 'react-scrollable-anchor'
 import Footer from '../../component/Footer';
 import ImageModal from '../../component/ImageModal';
-import { goToAnchor } from 'react-scrollable-anchor'
+import ScrollTrigger from 'react-scroll-trigger';
 
 
 
- 
+
 // Offset all anchors by -60 to account for a fixed header
 // and scroll more quickly than the default 400ms
 
@@ -22,81 +22,94 @@ export default class Home extends Component{
         super(props);
         
         this.state={
-            path:this.props.path,
+            lastpageYOffset:window.pageYOffset,
             imgUrl:"",
             imgDes:"",
             imgTitle:"",
         }
-
+        
         configureAnchors({offset: -60, scrollDuration: 200})
-
-        this.handleScroll = this.handleScroll.bind(this);
+        
         this.handleImageModal = this.handleImageModal.bind(this);
+        this.handleScroll = this.handleScroll.bind(this)
+        this.onEnterViewport = this.onEnterViewport.bind(this)
+        this.onExitViewport = this.onExitViewport.bind(this)
     }
-
+    
     handleImageModal(title,describtion,url){
         this.setState({imgUrl:url,imgTitle:title,imgDes:describtion});
     }
-
+    
     handleScroll(){
-        let path = window.location.pathname+window.location.hash
+        // let path = window.location.pathname+window.location.hash
+        // let actualpageYOffset = window.pageYOffset;
+        // this.props.setPath(window.pageXOffset)
 
-        if(path!=this.state.path){
-            this.props.setPath(path)
-        }
-
+      
         
-    }
+        
 
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
+    }    
+    
+    onEnterViewport(path) {
+
+        this.props.setPath(path)
+      
     }
     
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
+    onExitViewport(path){
+        let p = path.split('#');
+        window.location.pathname = p[0];
+        window.location.hash = '#'+p[1];    
     }
     
+        
     
-
-
-      render(){
-          return (
+    render(){
+        return (
             <div>
             
-
-<ImageModal imgTitle={this.props.imgTitle} imgUrl={this.props.imgUrl} imgDes={this.props.imgDes}></ImageModal>
-
+            
+            <ImageModal lang={this.props.lang} imgTitle={this.props.imgTitle} imgUrl={this.props.imgUrl} imgDes={this.props.imgDes}></ImageModal>
+            
             <div className="container-fluid" style={{position:'relative',background:'white',zIndex:100}}>
             
+            
+            <ScrollableAnchor id={'about'}>
+            <ScrollTrigger onEnter={()=>this.onEnterViewport("/#about")}  onExit={()=>this.onExitViewport(window.location.pathname+window.location.hash)}>
+            <div>
 
-                <ScrollableAnchor id={'about'}>
-                <div>
-                <div>
+            <ScrollTrigger onEnter={()=>this.onEnterViewport("/#about")}  onExit={()=>this.onExitViewport(window.location.pathname+window.location.hash)}>
+            <HomeIntro width={this.props.width}></HomeIntro>
+            </ScrollTrigger>
 
-                <HomeIntro width={this.props.width}></HomeIntro>
-                </div>
-                <div>
+            <ScrollTrigger onEnter={()=>this.onEnterViewport("/#about")}  onExit={()=>this.onExitViewport(window.location.pathname+window.location.hash)}>
+            <Homeskill></Homeskill>
+            </ScrollTrigger>
 
-                <Homeskill></Homeskill>
-                </div>
-                <div>
-
-                <Hometime></Hometime>
-                </div>
-                </div>
-                </ScrollableAnchor>
-
-                <ScrollableAnchor id={'references'}>
-
-                <References imagearray={this.props.imagearray} prints={this.props.prints} blender={this.props.blender}></References>
-
-                </ScrollableAnchor>
-
-                </div>
-
-                <Footer></Footer>
+            <ScrollTrigger onEnter={()=>this.onEnterViewport("/#about")}  onExit={()=>this.onExitViewport(window.location.pathname+window.location.hash)}>
+            <Hometime></Hometime>
+            </ScrollTrigger>
 
             </div>
-          )
-      }
-}
+            </ScrollTrigger>
+            </ScrollableAnchor>
+            
+            <ScrollableAnchor id={'references'}>
+            <div>
+
+            <ScrollTrigger onEnter={()=>this.onEnterViewport("/#references")} onExit={()=>this.onEnterViewport(window.location.pathname+window.location.hash)}>
+
+            <References lang={this.props.lang} imagearray={this.props.imagearray} prints={this.props.prints} blender={this.props.blender}></References>
+            </ScrollTrigger>
+            </div>
+            </ScrollableAnchor>
+            
+            </div>
+            
+            <Footer></Footer>
+            
+            </div>
+            )
+        }
+    }

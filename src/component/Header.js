@@ -9,6 +9,12 @@ export default class Header extends Component{
     constructor(props){
         super(props)
 
+        this.handleLanguage = this.handleLanguage.bind(this)
+    }
+
+    handleLanguage(lang){
+        this.props.handleLang(lang)
+        alert(this.props.lang)
     }
 
     
@@ -27,7 +33,7 @@ export default class Header extends Component{
                 </div>
                 </div>
                 <div className="flexcol1 flex-v-center flex-h-center title">
-                    <span className="title"><span>DE</span>|<span>EN</span></span>
+                    <span className="title"><span onClick={()=>this.handleLanguage(1)}>DE</span>|<span onClick={()=>this.handleLanguage(0)}>EN</span></span>
                 </div>
                 {this.props.width>=756
                 &&

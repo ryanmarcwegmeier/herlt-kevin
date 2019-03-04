@@ -14,7 +14,6 @@ export default class Header extends Component{
 
     handleLanguage(lang){
         this.props.handleLang(lang)
-        alert(this.props.lang)
     }
 
     
@@ -32,15 +31,17 @@ export default class Header extends Component{
                     }
                 </div>
                 </div>
-                <div className="flexcol1 flex-v-center flex-h-center title">
-                    <span className="title"><span onClick={()=>this.handleLanguage(1)}>DE</span>|<span onClick={()=>this.handleLanguage(0)}>EN</span></span>
+                <div className="flexcol1 flex-v-center flex-h-center title" style={{letterSpacing:'3px', fontSize:'0.8em',color:'#505050'}}>
+                GRAPHICDESIGNER
+                    
+                    
                 </div>
                 {this.props.width>=756
                 &&
 
                 <div className="flexcol3">
                     <div className="flexrow">
-                        <div className="flexcol1 h-56  ">
+                        <div className="flexcol2 pl-2 h-56  ">
                             <div className="flexcol1 borderb">
                             
                             </div>
@@ -48,8 +49,20 @@ export default class Header extends Component{
                             
                             </div>
                         </div>
-                        <div className="flexcol1 flex-h-center pr-4 flex-v-center title text-right">
-                        MEDIADESIGNER DIGITAL AND PRINT
+                        <div className="flexcol1 flex-h-center pr-2 flex-v-center title text-right">
+                        {this.props.lang == 1 ?
+                    <span className="title">
+                    <b><span onClick={()=>this.handleLanguage(1)} style={{cursor:'pointer'}}>DE</span> </b>
+                    <b className="p-2">|</b>
+                    <span onClick={()=>this.handleLanguage(0)} style={{cursor:'pointer'}}>EN</span>
+                    </span>
+                    :
+                    <span className="title">
+                    <span onClick={()=>this.handleLanguage(1)} style={{cursor:'pointer'}}>DE</span>
+                    <b className="p-2">|</b>
+                    <b><span onClick={()=>this.handleLanguage(0)} style={{cursor:'pointer'}}>EN</span></b>
+                    </span>
+                    }
                         </div>
                     </div>
                 </div>

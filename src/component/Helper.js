@@ -2,8 +2,13 @@ const liste = {
     "ABOUT":"ÜBER",
     "REFERENCES":"REFERENZEN",
     "CONTACT":"KONTAKT",
-    "I'm Kevin Herlt,":"Ich bin Kevin Herlt,",
+    "I'm":"Ich bin",
     "a graphicdesigner with passion and love for detail. My journey as a designer startet in an agile creative agency in Hamburg. Enjoy this glimpse of my creative endevours and get to know the man behind the keyboard.":"ein Mediengestalter mit Leidenschaft und Liebe fürs Detail. Meine Reise als Designer begann in einer agilen Kreativagentur in Hamburg. Genießt den Einblick in meine kreativen Arbeiten und lernt den Mann hinter der Tastatur kennen.",
+    "SKILLBAR":"FÄHIGKEITEN",
+    "FORMAL EDUCATION AND CAREER":"Lebenslauf",
+    "School":"Schulische",
+    "Career":"Laufbahn",
+    "Professional":"Berufliche",
     "Professional skills":"Berufliche Fähigkeiten",
     "Adobe Photoshop":"Adobe Photoshop",
     "Adobe InDesign":"Adobe InDesign",
@@ -12,6 +17,7 @@ const liste = {
     "Wordpress Divi":"Wordpress Divi",
     "Creative & Motivated":"Kreativ & Motiviert",  
     "Logos":"Logos",
+    "REFERENCES":"REFERENZEN",
     "Elsa Brändström Haus":"Elsa Brändström Haus",
     "This Logo was made for a international seminar and conference venue. It was created during my professional training in the agency Euphorika.":"Dieses Logo wurde für ein internationales Bildungs- und Tagungshaus während meiner Ausbildung in Euphorika entwickelt.",
     "Kevin Herlt":"Kevin Herlt",
@@ -47,13 +53,33 @@ const liste = {
     "Elsa Brändström Haus Webdesign":"Elsa Brändström Haus Webdesign",
     "I contributed to the design of this website. It was designed during my professional training in Euphorika. To the website https://ebh-hamburg.de/ ":"Bei dieser Webseite habe ich am design mitgewirkt. Sie wurde während meiner Ausbildung in Euphorika gestaltet. Zur Webseite https://ebh-hamburg.de/ ",
     "DSL Divi Website":"DSL Divi Webseite",
-    "This website was built with a Divi Theme on Wordpress. It was created during my professional training in Euphorika. To the website https://www.dsl-sachwert.de/ ":"Diese Webseite wurde mit einem Divi Theme auf Wordpress aufgebaut. Es wurde während meiner Ausbildung in Euphorika erstellt. Zur Webseite https://www.dsl-sachwert.de/ ",
+    "I designed the website during my professional training in Euphorika. To the website <a href='https://www.silkdarling.com/'>https://www.silkdarling.com/</a>":"Diese Website hab ich während meiner Ausbildung in Euphorika gestaltet. Zur Website <a href='https://www.silkdarling.com/'>https://www.silkdarling.com/</a>"    ,
+    "This website was built with a Divi Theme on Wordpress. It was created during my professional training in Euphorika. To the website <a href='https://www.bruhn-metallbau.de/'>https://www.bruhn-metallbau.de/</a>":"Diese Webseite wurde mit einem Divi Theme auf Wordpress aufgebaut. Es wurde während meiner Ausbildung in Euphorika erstellt. Zur Webseite <a href='https://www.bruhn-metallbau.de'>https://www.bruhn-metallbau.de/",
+    "I designed the website during my professional training in Euphorika. To the website <a href='https://www.silkdarling.com/'>https://www.silkdarling.com/ </a>":"Diese Website hab ich während meiner Ausbildung in Euphorika gestaltet. Zur Website <a href='https://www.silkdarling.com/'>https://www.silkdarling.com/ </a>",
+    "I contributed to the design of this website. It was designed during my professional training in Euphorika. To the website <a href='https://ebh-hamburg.de'> https://ebh-hamburg.de/ </a>":"Bei dieser Webseite habe ich am design mitgewirkt. Sie wurde während meiner Ausbildung in Euphorika gestaltet. Zur Webseite <a href='https://ebh-hamburg.de'> https://ebh-hamburg.de/ </a>",
+    
+
+    
+    "Silk Darling exhibitor":"Silk Darling Aussteller",
+    "This is a design for an exhibitor of Silk Darling. This layout was created during my training in Euphorika.":"Das ist ein design für einen Aussteller von Silk Darling. Dieses Layout wurde während meiner Ausbildung in Euphorika erstellt.",
+        
+        
+        
+    "Navis Heide Park invitation":"Navis Heide Park Einladung",
+    "This invitation was for the company Navis who invited theiremployees to the amusement park 'Heide Park'. In this illustration, I have designed the compilation of the individual elements that come from Shutterstock.":"Diese Einladung war für die Firma Navis die ihre Mitarbeiter zum Freizeitpark 'Heide Park' eingeladen haben. In dieser Illustration habe ich die zusammenstellung der einzelnen Elemente, die aus Shutterstock kommen, gestaltet.",
+        
+    
+    "Pockets Webdesign":"Pockets Webdesign",
+    "I designed the website for the company consultant Pockets during my training in Euphorika.":"Das Design für die Unternehmens Berater Pockets habe ich während meiner Ausbildung in Euphorika gestaltet.",
+
+    
     "3D Blender":"3D Blender",
     "3D Devil":"3D Teufel",
     "I created this devil with VR glasses in the program Oculus Medium. The details on 3D Blender.":"Diesen Teufel habe ich mit einer VR Brille im Programm Oculus Medium erstellt. Die Details auf 3D Blender.",
     "Silver Fences":"Silber Zaun",
     "It was created by myself and it was my first experience with 3D Blender.":"Es wurde von mir selbst entworfen. Es war meine erste Erfahrung mit 3D Blender.",
     "Liquid Silver texture":"Flüssige Silber Textur",
+    
     "FORMAL EDUCATION AND CAREER":"LEBENSLAUF",
     "School Career":"Schulische Laufbahn",
     "Primary school Tannenweg, Glinde":"Grundschule Tannenweg, Glinde",
@@ -69,8 +95,14 @@ const liste = {
     "IMPRINT":"IMPRESSUM",
     "General Privacy Policy":"Allgemeine Datenschutzerklärung",
     "By using our website, you consent to the collection, processing and use of data in accordance with the following description. Our website can generally be visited without registration. Data such as pages accessed or names of files accessed, date and time are stored on the server for statistical purposes without this data being directly related to your person. Personal data, in particular name, address or E-mail address are collected as far as possible on a voluntary basis. The data will not be passed on to third parties without your consent. Privacy policy of this website created by the generator of Muster-Datenschutzerklärung von anwalt.de":"Durch die Nutzung unserer Website erklären Sie sich mit der Erhebung, Verarbeitung und Nutzung von Daten gemäß der nachfolgenden Beschreibung einverstanden. Unsere Website kann grundsätzlich ohne Registrierung besucht werden. Dabei werden Daten wie beispielsweise aufgerufene Seiten bzw. Namen der abgerufenen Datei, Datum und Uhrzeit zu statistischen Zwecken auf dem Server gespeichert, ohne dass diese Daten unmittelbar auf Ihre Person bezogen werden. Personenbezogene Daten, insbesondere Name, Adresse oder E-Mail-Adresse werden soweit möglich auf freiwilliger Basis erhoben. Ohne Ihre Einwilligung erfolgt keine Weitergabe der Daten an Dritte. Quelle: Muster-Datenschutzerklärung von anwalt.de",
-    
-
+    "Primary school Tannenweg, Glinde":"Grundschule Tannenweg, Glinde",
+    "Catholic school St. Paulus":"Katholische Schule St. Paulus, Hamburg",
+    "Graduation: MSA":"Abschluss: MSA",
+    "visit of a independent art school 'Kunstschule Bergedorf', Hamburg":"Besuch einer freien Kunstschule 'Kunstschule Bergedorf', Hamburg",
+    "Three-week student internship at 'Depeshe GmbH & Co. KG', Geesthacht in the area of media design":"Dreiwöchiges Schülerpraktikum bei 'Depeshe GmbH & Co. KG', Geesthacht im Bereich Mediengestaltung",
+    "Voluntary social year at the 'Erzbistum Hamburg' in the area Media Office":"Freiwilliges Soziales Jahr beim 'Erzbistum Hamburg' in der Einsatzstelle Stabsstelle Medien",
+    "Professional training as a media designer in digital and print products in the agency Euphorika, Hamburg":"Ausbildung als Mediengestalter Digital und Print in der Firma Euphorika",
+    "Today":"Heute"
 
 }
 export default class Helper {
@@ -81,6 +113,11 @@ export default class Helper {
 
 
   static translate(text, lang){
+
+    if(liste[text]==undefined){
+        return text;
+    }
+
     if(lang==1){
         return liste[text]
     }else{

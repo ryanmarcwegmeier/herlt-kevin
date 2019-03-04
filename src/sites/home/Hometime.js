@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import Zoom from 'react-reveal'
+import Helper from '../../component/Helper'
 
 export default class Hometime extends Component {
     constructor(props){
@@ -14,16 +15,16 @@ export default class Hometime extends Component {
             <div className=" mt-5 pt-5 pb-5 mb-3">
 
             <div className="">
-            <h3 className="mb-3"><span className="headlines">CAREER</span>
+            <h3 className="mb-4 pb-4"><span className="headlines">{Helper.translate('FORMAL EDUCATION AND CAREER',this.props.lang)}</span>
             </h3>
             </div>
             
             <div className="flexrow">
             
             
-            <div className="flexcol1 " >
+            <div className="flexcol1" >
             <h4 className="mb-4">
-                School <b>career</b>
+                <b>{Helper.translate("School",this.props.lang)}</b> {Helper.translate("Career",this.props.lang)}
             </h4>
             <p className="mb-4">
                 <b>
@@ -31,57 +32,58 @@ export default class Hometime extends Component {
                 </b>
                 
             <br></br>
-            Primary school Tannenweg, Glinde
+            {Helper.translate("Primary school Tannenweg, Glinde",this.props.lang)}
+            
             </p>
             <p>
             <b>
                 2005 – 2015 
             </b>
             <br></br>
-            Catholic school St. Paulus 
-            <br></br>Hamburg Graduation: MSA
+            {Helper.translate("Catholic school St. Paulus",this.props.lang)}
+             
+            <br></br>
+            {Helper.translate("Hamburg Graduation: MSA",this.props.lang)}
+            </p>
 
+            <p>
+            <b>
+                2012 – 2013 
+            </b>
+            <br></br>
+            {Helper.translate("visit of a independent art school 'Kunstschule Bergedorf', Hamburg",this.props.lang)}
+             
+            
             </p>
             </div>
 
             <div className="flexcol1 pl-4" >
             <h4 className="mb-4">
-                Professional <b>career</b>
+            <b>{Helper.translate("Professional",this.props.lang)}</b> {Helper.translate("Career",this.props.lang)}
             </h4>
             <p className="mb-4">
 
-                <b>04.02.2013 -15.02.2013 </b>
+                <b>09.09.2013 - 27.09.2013 </b>
                 <br>
                 </br>
-                Two-week student internship at the Catholic kindergarten at „zu den Heilligen drei Engeln“ , Glinde in the educator area
+                {Helper.translate("Three-week student internship at 'Depeshe GmbH & Co. KG', Geesthacht in the area of media design",this.props.lang)}
             </p>
             <p className="mb-4">
                 <b>    
-                09.09.2013 - 27.09.2013 
+                07.09.2015 - 31.08.2016
                 </b>
                 <br></br>
-                Three-week student internship at „Depeshe GmbH &amp; Co. KG“, Geesthacht in the area of media design
+                {Helper.translate("Voluntary social year at the 'Erzbistum Hamburg' in the area Media Office",this.props.lang)}
                 
             </p>
             <p className="mb-4">
                 
-                    <b>07.09.2015 - 31.08.2016</b>
-                    <br></br> Voluntary social year at the „Erzbistum Hamburg“ in the area Media Office 
-                </p>
-                <p className="mb-4">
-                    <b>26.11.2016 - 10.10.2018</b>
-                    <br></br> Side job in the kiosk area for the company Aramark, Hamburg
-                
-                </p>
-                <p className="mb-4">
-                    <b>01.09.2016 - today</b>
-                    <br></br> Education as mediadesigner digital and print in the company Euphorika, Hamburg       
-                
-                </p>
+                    <b>01.09.2016 - {Helper.translate("Today",this.props.lang)}</b>
+                    <br></br> 
+                    {Helper.translate("Professional training as a media designer in digital and print products in the agency Euphorika, Hamburg",this.props.lang)}
 
-
-            
-            
+                </p>
+               
             </div>
            
             

@@ -8,6 +8,7 @@
     "mdbootstrap": "^4.7.3",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-html-parser": "^2.0.2",
     "react-image-lightbox": "^5.1.0",
     "react-is-scrolling": "^1.0.1",
     "react-modal-image": "^2.3.2",

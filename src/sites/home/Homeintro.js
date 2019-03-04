@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import '../../styles/container.css'
 import logo from '../../images/kevin-durchsichtig.png';
 import arrowdown from '../../images/arrowdown.png'
+import Helper from '../../component/Helper'
 
 export default class HomeIntro extends Component {
   render() {
@@ -17,13 +18,15 @@ export default class HomeIntro extends Component {
 
                 <div className="flexcol5 flex-v-center flex-h-center">
                     <section className="introText">
-                        <h2 className="mb-5">I‘m <b>Kevin Herlt</b></h2>
+                        <h2 className="mb-5">{Helper.translate("I'm",this.props.lang)} <b> {Helper.translate('Kevin Herlt',this.props.lang)},</b></h2>
                         <p style={{lineHeight:'2em'}}>
-                        I‘m a mediadesigner with passion and love for detail. I learned the profession of mediadesigner in the company Euphorika in Hamburg/ Germany. On this website I‘ll show you a little insight into my creative life. I also explain what my professional- and softskills are and what else I experienced in the beginning of my professional career.
-                            
+                        {
+                            Helper.translate('a graphicdesigner with passion and love for detail. My journey as a designer startet in an agile creative agency in Hamburg. Enjoy this glimpse of my creative endevours and get to know the man behind the keyboard.', this.props.lang)
+                        }
+   
                         </p>
                         <p>
-                            Lets get started!
+                        {Helper.translate("Let's get this bread!",this.props.lang)}
                         </p>
                     </section>
                 </div>
@@ -42,8 +45,12 @@ export default class HomeIntro extends Component {
                     <section className="introText marginTop">
                         <h2 className="mb-5">I‘m <b>Kevin Herlt</b></h2>
                         <p style={{lineHeight:'2em'}}>
-                        I‘m a mediadesigner with passion and love for detail. I learned the profession of mediadesigner in the company Euphorika in Hamburg/ Germany. On this website I‘ll show you a little insight into my creative life. I also explain what my professional- and softskills are and what else I experienced in the beginning of my professional career.
-                            
+
+                        a graphicdesigner with passion and love for detail. My journey as a
+designer startet in an agile creative agency in Hamburg. Enjoy this
+glimpse of my creative endevours and get to know the man behind
+the keyboard.
+
                         </p>
                         <p>
                             Lets get started!

@@ -80,15 +80,15 @@ export default class Home extends Component{
             <div>
 
             <ScrollTrigger onEnter={()=>this.onEnterViewport("/#about")}  onExit={()=>this.onExitViewport(window.location.pathname+window.location.hash)}>
-            <HomeIntro width={this.props.width}></HomeIntro>
+            <HomeIntro lang={this.props.lang} width={this.props.width}></HomeIntro>
             </ScrollTrigger>
 
             <ScrollTrigger onEnter={()=>this.onEnterViewport("/#about")}  onExit={()=>this.onExitViewport(window.location.pathname+window.location.hash)}>
-            <Homeskill></Homeskill>
+            <Homeskill lang={this.props.lang}></Homeskill>
             </ScrollTrigger>
 
             <ScrollTrigger onEnter={()=>this.onEnterViewport("/#about")}  onExit={()=>this.onExitViewport(window.location.pathname+window.location.hash)}>
-            <Hometime></Hometime>
+            <Hometime lang={this.props.lang}></Hometime>
             </ScrollTrigger>
 
             </div>
@@ -100,7 +100,7 @@ export default class Home extends Component{
 
             <ScrollTrigger onEnter={()=>this.onEnterViewport("/#references")} onExit={()=>this.onEnterViewport(window.location.pathname+window.location.hash)}>
 
-            <References lang={this.props.lang} imagearray={this.props.imagearray} prints={this.props.prints} blender={this.props.blender}></References>
+            <References lang={this.props.lang} imagearray={this.props.imagearray} prints={this.props.prints} blender={this.props.blender} digital = {this.props.digital}></References>
             </ScrollTrigger>
             </div>
             </ScrollableAnchor>

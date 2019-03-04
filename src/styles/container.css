@@ -202,7 +202,7 @@ body {
   .rotation{
     transform: rotate(-90deg);
     font-family: Lato, Helvetica, Roboto, sans-serif !important;
-    color: black;
+    color:#505050;
     letter-spacing: 3px;
   }
 
@@ -245,7 +245,7 @@ body {
     
 
   .selected{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #505050;
   }
 
   @media screen and (max-width: 755px) {
@@ -400,6 +400,7 @@ body {
 
 .headlines{
   border-bottom: 1px solid black !important;
+  letter-spacing: 3px
 }
 
 .modal-dialog{

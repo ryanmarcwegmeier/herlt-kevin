@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import '../../styles/container.css'
+import Helper from '../../component/Helper'
 
 export default class References extends Component{
     constructor(props){
@@ -10,17 +11,18 @@ export default class References extends Component{
         return(
             <div className="pb-2 pt-5 container-fluid">
 
-                <div className=""><h3 className=""><span className="headlines">REFERENCES</span> </h3></div>
-                <p>
-                Now I want to present you a small selection of my work from logos, print-, digitalproducts and  3D graphics created with Photoshop, Illustartor, InDesign and Blender.
-                </p>
-                <div className="mt-5 mb-3"><b className="">Logos</b></div>
+                <div className=""><h3 className=""><span className="headlines">{Helper.translate("REFERENCES",this.props.lang)}</span> </h3></div>
+                
+                <div className="mt-5 mb-3"><b className="">{Helper.translate("Logos",this.props.lang)}</b></div>
                 {this.props.imagearray}
 
-                <div className="mt-5 mb-3"><b className="">Prints</b></div>
+                <div className="mt-5 mb-3"><b className="">{Helper.translate("Prints",this.props.lang)}</b></div>
                 {this.props.prints} 
 
-                <div className="mt-5 mb-3"><b className="">Blender 3D</b></div>
+                <div className="mt-5 mb-3"><b className="">{Helper.translate("Digital",this.props.lang)}</b></div>
+                {this.props.digital} 
+
+                <div className="mt-5 mb-3"><b className="">{Helper.translate("Blender 3D",this.props.lang)}</b></div>
                 {this.props.blender}
 
             </div>

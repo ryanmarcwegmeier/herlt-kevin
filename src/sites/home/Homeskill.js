@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Helper from '../../component/Helper'
 import Zoom from 'react-reveal/Zoom'
 
 
@@ -11,9 +11,9 @@ export default class Homeskill extends Component {
     render(){
         return(
             <div>
-                <h3 className=""><span className="headlines">SKILLBAR</span> </h3>
+                <h3 className=""><span className="headlines" >{Helper.translate('SKILLBAR',this.props.lang)}</span> </h3>
 
-            <div className="mt-4 mb-2"><b className="">Hard Skills</b></div>
+            <div className="mt-4 mb-2"><b className="">{Helper.translate('Professional skills',this.props.lang)}</b></div>
 
             <div className="flexrow">
 
@@ -22,7 +22,7 @@ export default class Homeskill extends Component {
 
                     <Zoom>
                         <div className="mt-2 mb-1">
-                            Photoshop
+                            {Helper.translate('Adobe Photoshop',this.props.lang)}
                         </div>
                         <div className="progress">
                             <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "90%"}}>
@@ -33,8 +33,8 @@ export default class Homeskill extends Component {
 
                     <Zoom>
                     <div className="mt-2 mb-1">
-                            Illustrator
-                        </div>
+                        {Helper.translate('Adobe Illustrator',this.props.lang)}
+                    </div>
 
                         <div className="progress">
                             <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "90%"}}>
@@ -46,13 +46,25 @@ export default class Homeskill extends Component {
 
                     <Zoom>
                     <div className="mt-2 mb-1">
-                            Nerf shooting
+                        {Helper.translate('Microsoft Office',this.props.lang)}
                         </div>
                         <div className="progress">
-                            <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="101" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "101%"}}>
+                            <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "50%"}}>
                             </div>
                         </div>
-                        <div className="title">101%</div>
+                        <div className="title">50%</div>
+
+                    </Zoom>
+
+                    <Zoom>
+                    <div className="mt-2 mb-1">
+                        {Helper.translate('Creative & Motivated',this.props.lang)}
+                        </div>
+                        <div className="progress">
+                            <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "100%"}}>
+                            </div>
+                        </div>
+                        <div className="title">100%</div>
 
                     </Zoom>
 
@@ -69,7 +81,7 @@ export default class Homeskill extends Component {
                     <Zoom>
             
                     <div className="mt-2 mb-1">
-                            InDesign
+                    {Helper.translate('Adobe InDesign',this.props.lang)}
                         </div>
                         <div className="progress">
                             <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "90%"}}>
@@ -80,7 +92,7 @@ export default class Homeskill extends Component {
 
                     <Zoom>
                     <div className="mt-2 mb-1">
-                            Blender 3D
+                    {Helper.translate('Blender 3D',this.props.lang)}
                         </div>
                         <div className="progress">
                             <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "25%"}}>
@@ -92,13 +104,14 @@ export default class Homeskill extends Component {
 
                     <Zoom>
                     <div className="mt-2 mb-1">
-                            Basketball Player
+                    {Helper.translate('Wordpress Divi',this.props.lang)}
+
                         </div>
                         <div className="progress">
-                            <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "100%"}}>
+                            <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "60%"}}>
                             </div>
                         </div>
-                        <div className="title">100%</div>
+                        <div className="title">60%</div>
 
                         
                     </Zoom>
@@ -112,108 +125,11 @@ export default class Homeskill extends Component {
             </div>
 
 
-<div className="mt-4 mb-3"><b className="">Soft Skills</b></div>
-
-<div className="flexrow">
-
-<div className="flexcol1 pr-3 ">
-    <section>
-
-    <Zoom>
-    <div className="mt-2 mb-1">
-                Loadable
-            </div>
-            <div className="progress">
-                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "100%"}}>
-                </div>
-            </div>
-            <div className="title">100%</div>
-
-            
-        </Zoom>
-
-        <Zoom>
-        <div className="mt-2 mb-1">
-                Reliable
-            </div>
-            <div className="progress">
-                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "100%"}}>
-                </div>
-            </div>
-            <div className="title">100%</div>
-
-            
-        </Zoom>
-
-        <Zoom>
-        <div className="mt-2 mb-1">
-                Polite
-            </div>
-            <div className="progress">
-                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "100%"}}>
-                </div>
-            </div>
-            <div className="title">100%</div>
-
-            
-        </Zoom>
 
 
 
 
-    </section>
-</div>
 
-<div className="flexcol1 pl-3">
-
-    <section className='' style={{ width: '100%' }}>
-
-        <Zoom>
-        <div className="mt-2 mb-1">
-                Creativity
-            </div>
-            <div className="progress">
-                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "100%"}}>
-                </div>
-            </div>
-            <div className="title">100%</div>
-
-            
-        </Zoom>
-
-        <Zoom>
-        <div className="mt-2 mb-1">
-                motivated
-            </div>
-            <div className="progress">
-                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "100%"}}>
-                </div>
-            </div>
-            <div className="title">100%</div>
-
-            
-        </Zoom>
-
-        <Zoom>
-        <div className="mt-2 mb-1">
-                Teamplayer
-            </div>
-            <div className="progress">
-                <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{maxWidth: "100%"}}>
-                </div>
-            </div>
-            <div className="title">100%</div>
-
-            
-        </Zoom>
-
-    </section>
-</div>
-
-
-
-
-</div>
         </div>
         );
     }

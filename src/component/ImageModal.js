@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import '../styles/container.css';
 import Helper from './Helper'
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+
 
 export default class ImageModal extends Component{
     constructor(props){
@@ -54,17 +56,17 @@ export default class ImageModal extends Component{
             </div>
             
             
-            {(this.props.imgDes.length>0) &&
+            {(this.props.imgDes.length>0) ?
                 <div className="row" >
                 
                 {this.state.small?
                     <div className="col-md-6 text-center">
-                    <img src={this.props.imgUrl} style={{width:'100%'}} ></img>
+                    <img src={this.props.imgUrl} style={{width:'100%', border:0}} ></img>
                     </div>:
                     <div className="col-md-12 text-center">
                     {
                         window.innerWidth>=756 ?
-                        <img src={this.props.imgUrl} style={{width:'100%'}} ></img>
+                        <img src={this.props.imgUrl} style={{width:'100%', border:0}} ></img>
                         :
                         <img src={this.props.imgUrl} style={{position:'fixed', top:'43px',left:0,width:'100vw'}} ></img>
                         
@@ -75,14 +77,36 @@ export default class ImageModal extends Component{
                 }
                 
                 {this.state.small?
-                    <div className="col-md-6">
-                    {this.props.imgDes}
+                    <div className="col-md-6 p-3">
+                    <h5 className="pt-3">{Helper.translate(this.props.imgTitle,this.props.lang)}</h5>
+                    <div className="flexrow" style={{height:"100%"}}>
+                    {
+                         window.innerWidth>=768?
+                        <div className="flexcol1 flex-v-center pr-2" style={{"marginTop":"-40%"}}>
+                            {ReactHtmlParser(Helper.translate(this.props.imgDes,this.props.lang))} 
+                        </div>:
+                        <div className="flexcol1 flex-v-center pr-2 pb-3">
+                            {ReactHtmlParser(Helper.translate(this.props.imgDes,this.props.lang))} 
+                        </div>                    
+                    }
+                    </div>
+
                     </div>:
                     <div className="col-md-12">
-                    
                     </div>
                     
                 }
+                </div>
+
+                :
+
+
+                <div className="row" >
+                
+                    <div className="col-md-12 text-center">
+                    <img src={this.props.imgUrl} style={{width:'100%', border:0}} ></img>
+                    </div>                    
+
                 </div>
                 
             }

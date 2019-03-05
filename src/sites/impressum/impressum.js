@@ -3,9 +3,6 @@ import Helper from '../../component/Helper'
 import ReactHtmlParser from 'react-html-parser';
 import Footer from '../../component/Footer'
 export default class Impressum extends Component{
-    // constructor(props){
-    //     super(props);
-    // }
 
     componentDidMount(){
         this.props.setPath("/imprint")

@@ -9,7 +9,7 @@ import Helper from './component/Helper'
 
 import Home from './sites/home/Home'
 import Header from './component/Header'
-import Impressum from './sites/impressum/Impressum'
+// import Impressum from './sites/impressum/Impressum'
 import Policy from './sites/policy/Policy'
 
 
@@ -405,7 +405,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
 
 <main className={!this.state.isnavtoggled?"flexcol13 mt56 paddingleft":'flexcol13 mt56 paddingleft '} style={{position:'relative'}}>
 <Route exact path='/' render={(props) => <Home {...props} lang={this.state.lang}  path={this.state.path} imgUrl={this.state.imgUrl} imgDes={this.state.imgDes} imgType={this.state.imgType} imgTitle={this.state.imgTitle} setPath={this.setPath} width={this.state.width}  imagearray={this.state.imagearray} prints={this.state.prints} blender={this.state.blender} digital={this.state.digital} />}/>
-<Route exact path='/imprint' render={(props) => <Impressum {...props} setPath={this.setPath} lang={this.state.lang} path={this.state.path}  width={this.state.width} />}/>
+{/* <Route exact path='/imprint' render={(props) => <Impressum {...props} setPath={this.setPath} lang={this.state.lang} path={this.state.path}  width={this.state.width} />}/> */}
 <Route exact path='/privacypolicy' render={(props) => <Policy {...props} setPath={this.setPath} lang={this.state.lang} path={this.state.path}  width={this.state.width} />}/>
 
 </main>

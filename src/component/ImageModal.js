@@ -78,14 +78,14 @@ export default class ImageModal extends Component{
                 
                 {this.state.small?
                     <div className="col-md-6 p-3">
-                    <h5 className="pt-3">{Helper.translate(this.props.imgTitle,this.props.lang)}</h5>
+                    <h5 className="p-1">{Helper.translate(this.props.imgTitle,this.props.lang)}</h5>
                     <div className="flexrow" style={{height:"100%"}}>
                     {
                          window.innerWidth>=768?
-                        <div className="flexcol1 flex-v-center pr-2" style={{"marginTop":"-40%"}}>
+                        <div className="flexcol1 flex-v-center p-1 pr-2" style={{"marginTop":"-40%"}}>
                             {ReactHtmlParser(Helper.translate(this.props.imgDes,this.props.lang))} 
                         </div>:
-                        <div className="flexcol1 flex-v-center pr-2 pb-3">
+                        <div className="flexcol1 flex-v-center p-1 pb-3">
                             {ReactHtmlParser(Helper.translate(this.props.imgDes,this.props.lang))} 
                         </div>                    
                     }

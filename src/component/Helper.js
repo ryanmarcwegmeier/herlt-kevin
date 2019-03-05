@@ -79,7 +79,7 @@ const liste = {
     "Silver Fences":"Silber Zaun",
     "It was created by myself and it was my first experience with 3D Blender.":"Es wurde von mir selbst entworfen. Es war meine erste Erfahrung mit 3D Blender.",
     "Liquid Silver texture":"Flüssige Silber Textur",
-    
+
     "FORMAL EDUCATION AND CAREER":"LEBENSLAUF",
     "School Career":"Schulische Laufbahn",
     "Primary school Tannenweg, Glinde":"Grundschule Tannenweg, Glinde",
@@ -102,7 +102,9 @@ const liste = {
     "Three-week student internship at 'Depeshe GmbH & Co. KG', Geesthacht in the area of media design":"Dreiwöchiges Schülerpraktikum bei 'Depeshe GmbH & Co. KG', Geesthacht im Bereich Mediengestaltung",
     "Voluntary social year at the 'Erzbistum Hamburg' in the area Media Office":"Freiwilliges Soziales Jahr beim 'Erzbistum Hamburg' in der Einsatzstelle Stabsstelle Medien",
     "Professional training as a media designer in digital and print products in the agency Euphorika, Hamburg":"Ausbildung als Mediengestalter Digital und Print in der Firma Euphorika",
-    "Today":"Heute"
+    "Today":"Heute",
+    "CONTACT":"KONTAKT",
+    "I am always looking for new adventures and challenges. So if you are interested, just drop me a quick line and I will get in contact with you.":"Ich bin immer auf der Suche nach neuen Abenteuern und Herausforderungen. Wenn du interessiert bist, schreib mir einfach eine kurze Nachricht und ich werde mich mit dir in Verbindung setzen."
 
 }
 export default class Helper {

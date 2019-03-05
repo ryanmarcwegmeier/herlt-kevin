@@ -28,10 +28,9 @@ export default class Home extends Component{
             imgTitle:"",
         }
         
-        configureAnchors({offset: -60, scrollDuration: 200})
+        configureAnchors({offset: -60, scrollDuration: 2000})
         
         this.handleImageModal = this.handleImageModal.bind(this);
-        this.handleScroll = this.handleScroll.bind(this)
         this.onEnterViewport = this.onEnterViewport.bind(this)
         this.onExitViewport = this.onExitViewport.bind(this)
     }
@@ -40,16 +39,7 @@ export default class Home extends Component{
         this.setState({imgUrl:url,imgTitle:title,imgDes:describtion});
     }
     
-    handleScroll(){
-        // let path = window.location.pathname+window.location.hash
-        // let actualpageYOffset = window.pageYOffset;
-        // this.props.setPath(window.pageXOffset)
-
-      
-        
-        
-
-    }    
+     
     
     onEnterViewport(path) {
 
@@ -58,9 +48,15 @@ export default class Home extends Component{
     }
     
     onExitViewport(path){
-        let p = path.split('#');
-        window.location.pathname = p[0];
-        window.location.hash = '#'+p[1];    
+        // let p = path.split('#');
+        // window.location.pathname = p[0];
+        // window.location.hash = '#'+p[1];    
+    }
+
+    componentDidMount(){
+        if(window.location.pathname+window.location.hash == "/"){
+            this.props.setPath("/about")
+        }
     }
     
         
@@ -98,16 +94,25 @@ export default class Home extends Component{
             <ScrollableAnchor id={'references'}>
             <div>
 
-            <ScrollTrigger onEnter={()=>this.onEnterViewport("/#references")} onExit={()=>this.onEnterViewport(window.location.pathname+window.location.hash)}>
+            <ScrollTrigger onEnter={()=>this.onEnterViewport("/#references")} >
 
-            <References lang={this.props.lang} imagearray={this.props.imagearray} prints={this.props.prints} blender={this.props.blender} digital = {this.props.digital}></References>
+            <References setPath={()=>this.props.setPath}  lang={this.props.lang} imagearray={this.props.imagearray} prints={this.props.prints} blender={this.props.blender} digital = {this.props.digital}></References>
             </ScrollTrigger>
             </div>
             </ScrollableAnchor>
             
             </div>
             
-            <Footer></Footer>
+            <ScrollableAnchor id={'contact'}>
+            <div>
+
+            <ScrollTrigger onEnter={()=>this.onEnterViewport("/#contact")} >
+
+            <Footer setPath={this.setPath} lang ={this.props.lang}></Footer>
+            </ScrollTrigger>
+
+            </div>
+            </ScrollableAnchor>
             
             </div>
             )

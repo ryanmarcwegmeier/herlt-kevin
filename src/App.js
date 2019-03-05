@@ -10,6 +10,8 @@ import {
 import Home from './sites/home/Home'
 import Contact from './sites/contact/Contact'
 import Header from './component/Header'
+import Impressum from './sites/impressum/Impressum'
+
 
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { goToAnchor } from "react-scrollable-anchor";
@@ -79,6 +81,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
         this.toggle = this.toggle.bind(this)
         this.goToAbout = this.goToAbout.bind(this)
         this.goToReferences = this.goToReferences.bind(this)
+        this.goToContact = this.goToContact.bind(this)
         this.goToPath = this.goToPath.bind(this)
         this.updateDimensions = this.updateDimensions.bind(this)
         this.setPath = this.setPath.bind(this)
@@ -126,9 +129,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
           
           
           setPath(path){
-            
             this.setState({path:path})
-            
           }
           
           
@@ -154,6 +155,13 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
             this.goToPath('/#references')
             this.setState({isnavtoggled:false})
             goToAnchor('references')
+            
+          }
+
+          goToContact(){
+            this.goToPath('/#contact')
+            this.setState({isnavtoggled:false})
+            goToAnchor('contact')
             
           }
           
@@ -279,8 +287,8 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
               
               
               <div className="flexcol1 flex-v-center flex-h-center ">
-              <NavLink exact to="/contact"   onClick={()=>this.goToPath('/contact')}>
-              {(this.state.path=='/contact')
+              <NavLink exact to="/#contact"   onClick={this.goToContact}>
+              {(this.state.path=='/#contact')
               ?
               <div className="rotation selected">CONTACT</div>
               :
@@ -330,12 +338,12 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
           </div>
           <div className=" p-3" style={{display:'block'}}>
           
-          <NavLink exact to="/contact" style={{display:'inline-block'}} onClick={()=>this.goToPath('/contact')}>
-          {this.state.path=='/contact'
+          <NavLink exact to="/#contact" style={{display:'inline-block'}} onClick={()=>this.goToPath('/contact')}>
+          {this.state.path=='/#contact'
           ?
-          <span className="selected"  onClick={this.toggle}>CONTACT</span>
+          <span className="selected"  onClick={this.goToContact}>CONTACT</span>
           :
-          <span  onClick={this.toggle}>CONTACT</span>
+          <span  onClick={this.goToContact}>CONTACT</span>
         }              </NavLink>
         
         </div>
@@ -377,7 +385,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
 
 <main className={!this.state.isnavtoggled?"flexcol13 mt56 paddingleft":'flexcol13 mt56 paddingleft '} style={{position:'relative'}}>
 <Route exact path='/' render={(props) => <Home {...props} lang={this.state.lang}  path={this.state.path} imgUrl={this.state.imgUrl} imgDes={this.state.imgDes} imgTitle={this.state.imgTitle} setPath={this.setPath} width={this.state.width}  imagearray={this.state.imagearray} prints={this.state.prints} blender={this.state.blender} digital={this.state.digital} />}/>
-<Route exact path='/contact' render={(props) => <Contact {...props}lang={this.state.lang}  setPath={this.setPath} width={this.state.width}  />}/>
+<Route exact path='/imprint' render={(props) => <Impressum {...props} setPath={this.setPath} lang={this.state.lang}  width={this.state.width} />}/>
 
 </main>
 

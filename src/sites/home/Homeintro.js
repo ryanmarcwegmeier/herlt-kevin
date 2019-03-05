@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import '../../styles/container.css'
 import logo from '../../images/kevin-durchsichtig.png';
 import arrowdown from '../../images/arrowdown.png'
 import Helper from '../../component/Helper'
+import '../../styles/container.css'
 
 export default class HomeIntro extends Component {
   render() {

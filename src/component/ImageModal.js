@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import '../styles/container.css';
 import Helper from './Helper'
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import ReactHtmlParser from 'react-html-parser';
 
 
 export default class ImageModal extends Component{
@@ -28,14 +28,14 @@ export default class ImageModal extends Component{
     render(){
         return(
             <div>
-            <div class="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class={!this.state.small?"modal-dialog modal-dialog-centered fullscreen":"modal-dialog modal-dialog-centered"} role="document">
+            <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className={!this.state.small?"modal-dialog modal-dialog-centered fullscreen":"modal-dialog modal-dialog-centered"} role="document">
             
-            <div class="modal-content">
+            <div className="modal-content">
             <div>
-            <div class="row text-light p-2 imgModalHead" style={{background:'black', position:'fixed', top:0, left:0, right:0, zIndex:200}}>
+            <div className="row text-light p-2 imgModalHead" style={{background:'black', position:'fixed', top:0, left:0, right:0, zIndex:200}}>
             
-            <h5 class="ml-4 modal-title" id="exampleModalLabel">{Helper.translate(this.props.imgTitle,this.props.lang)} 
+            <h5 className="ml-4 modal-title" id="exampleModalLabel">{Helper.translate(this.props.imgTitle,this.props.lang)} 
             
             </h5>
             
@@ -43,14 +43,14 @@ export default class ImageModal extends Component{
             
             {
                 this.state.small?
-                <i class="fas fa-expand mr-4" onClick={this.handleBig}></i>
+                <i className="fas fa-expand mr-4" onClick={this.handleBig}></i>
                 :
-                <i class="fas fa-compress mr-4" onClick={this.handleSmall}></i>
+                <i className="fas fa-compress mr-4" onClick={this.handleSmall}></i>
             }
             {/* <a href={this.props.imgUrl} download style={{textDecoration:'none', color:'#f8f9fa'}}>
             <i class="fas fa-download mr-4"></i>
             </a> */}
-            <i class="fas fa-times mr-4"  data-dismiss="modal" aria-label="Close"></i>
+            <i className="fas fa-times mr-4"  data-dismiss="modal" aria-label="Close"></i>
             </div>
             
             </div>
@@ -61,14 +61,14 @@ export default class ImageModal extends Component{
                 
                 {this.state.small?
                     <div className="col-md-6 text-center">
-                    <img src={this.props.imgUrl} style={{width:'100%', border:0}} ></img>
+                    <img alt={this.props.imgTitle} src={this.props.imgUrl} style={{width:'100%', border:0}} ></img>
                     </div>:
                     <div className="col-md-12 text-center">
                     {
                         window.innerWidth>=756 ?
-                        <img src={this.props.imgUrl} style={{width:'100%', border:0}} ></img>
+                        <img alt={this.props.imgTitle} src={this.props.imgUrl} style={{width:'100%', border:0}} ></img>
                         :
-                        <img src={this.props.imgUrl} style={{position:'fixed', top:'43px',left:0,width:'100vw'}} ></img>
+                        <img alt={this.props.imgTitle} src={this.props.imgUrl} style={{position:'fixed', top:'43px',left:0,width:'100vw'}} ></img>
                         
                         
                     }
@@ -105,7 +105,7 @@ export default class ImageModal extends Component{
                 <div className="row" >
                 
                     <div className="col-md-12 text-center">
-                    <img src={this.props.imgUrl} style={{width:'100%', border:0}} ></img>
+                    <img alt={this.props.imgTitle} src={this.props.imgUrl} style={{width:'100%', border:0}} ></img>
                     </div>                    
 
                 </div>

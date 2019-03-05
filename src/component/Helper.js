@@ -3,12 +3,10 @@ const liste = {
     "Phone":"Telefon",
     "E-mail address":"E-Mail Adresse",
     "ABOUT":"ÜBER",
-    "REFERENCES":"REFERENZEN",
     "CONTACT":"KONTAKT",
     "I'm":"Ich bin",
     "a graphicdesigner with passion and love for detail. My journey as a designer startet in an agile creative agency in Hamburg. Enjoy this glimpse of my creative endevours and get to know the man behind the keyboard.":"ein Mediengestalter mit Leidenschaft und Liebe fürs Detail. Meine Reise als Designer begann in einer agilen Kreativagentur in Hamburg. Genießt den Einblick in meine kreativen Arbeiten und lernt den Mann hinter der Tastatur kennen.",
     "SKILLBAR":"FÄHIGKEITEN",
-    "FORMAL EDUCATION AND CAREER":"Lebenslauf",
     "School":"Schulische",
     "Career":"Laufbahn",
     "Professional":"Berufliche",
@@ -96,17 +94,9 @@ const liste = {
 
     "FORMAL EDUCATION AND CAREER":"LEBENSLAUF",
     "School Career":"Schulische Laufbahn",
-    "Primary school Tannenweg, Glinde":"Grundschule Tannenweg, Glinde",
     "Catholic school St. Paulus, Hamburg":"Katholische Schule St. Paulus, Hamburg",
-    "Graduation: MSA":"Abschluss: MSA",
-    "visit of a independent art school 'Kunstschule Bergedorf', Hamburg":"Besuch einer freien Kunstschule 'Kunstschule Bergedorf', Hamburg",
     "Professional career":"Berufliche Laufbahn",
-    "Three-week student internship at 'Depeshe GmbH & Co. KG', Geesthacht in the area of media design":"Dreiwöchiges Schülerpraktikum bei Depeshe GmbH & Co. KG, Geesthacht im Bereich Mediengestaltung",
-    "Voluntary social year at the 'Erzbistum Hamburg' in the area Media Office":"Freiwilliges Soziales Jahr beim Erzbistum Hamburg in der Einsatzstelle Stabsstelle Medien",
-    "Professional training as a media designer in digital and print products in the agency Euphorika, Hamburg":"Ausbildung als Mediengestalter Digital und Print in der Firma Euphorika",
     "I am always looking for new adventures and challenges. So if you are interested, just drop me a quick line and I will get in contact with you.":"Ich bin immer auf der Suche nach neuen Abenteuern und Herausforderungen. Wenn du interessiert bist, schreib mir einfach eine kurze Nachricht und ich werde mich mit dir in Verbindung setzen.",
-    "PRIVACY POLICY":"DATENSCHUTZ",
-    "IMPRINT":"IMPRESSUM",
     "General Privacy Policy":"Allgemeine Datenschutzerklärung",
     "By using our website, you consent to the collection, processing and use of data in accordance with the following description. Our website can generally be visited without registration. Data such as pages accessed or names of files accessed, date and time are stored on the server for statistical purposes without this data being directly related to your person. Personal data, in particular name, address or E-mail address are collected as far as possible on a voluntary basis. The data will not be passed on to third parties without your consent.":"Durch die Nutzung unserer Website erklären Sie sich mit der Erhebung, Verarbeitung und Nutzung von Daten gemäß der nachfolgenden Beschreibung einverstanden. Unsere Website kann grundsätzlich ohne Registrierung besucht werden. Dabei werden Daten wie beispielsweise aufgerufene Seiten bzw. Namen der abgerufenen Datei, Datum und Uhrzeit zu statistischen Zwecken auf dem Server gespeichert, ohne dass diese Daten unmittelbar auf Ihre Person bezogen werden. Personenbezogene Daten, insbesondere Name, Adresse oder E-Mail-Adresse werden soweit möglich auf freiwilliger Basis erhoben. Ohne Ihre Einwilligung erfolgt keine Weitergabe der Daten an Dritte.",
     
@@ -120,8 +110,6 @@ const liste = {
     "Voluntary social year at the 'Erzbistum Hamburg' in the area Media Office":"Freiwilliges Soziales Jahr beim 'Erzbistum Hamburg' in der Einsatzstelle Stabsstelle Medien",
     "Professional training as a media designer in digital and print products in the agency Euphorika, Hamburg":"Ausbildung als Mediengestalter Digital und Print in der Firma Euphorika",
     "Today":"Heute",
-    "CONTACT":"KONTAKT",
-    "I am always looking for new adventures and challenges. So if you are interested, just drop me a quick line and I will get in contact with you.":"Ich bin immer auf der Suche nach neuen Abenteuern und Herausforderungen. Wenn du interessiert bist, schreib mir einfach eine kurze Nachricht und ich werde mich mit dir in Verbindung setzen."
 
 }
 export default class Helper {
@@ -133,11 +121,11 @@ export default class Helper {
 
   static translate(text, lang){
 
-    if(liste[text]==undefined){
+    if(liste[text]===undefined){
         return text;
     }
 
-    if(lang==1){
+    if(lang===1){
         return liste[text]
     }else{
         return text;

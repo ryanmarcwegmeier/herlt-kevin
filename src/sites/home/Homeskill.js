@@ -4,9 +4,6 @@ import Zoom from 'react-reveal/Zoom'
 
 
 export default class Homeskill extends Component {
-    constructor(props){
-        super(props)
-    }
 
     render(){
         return(

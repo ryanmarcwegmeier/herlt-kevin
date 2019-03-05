@@ -3,9 +3,7 @@ import Zoom from 'react-reveal'
 import Helper from '../../component/Helper'
 
 export default class Hometime extends Component {
-    constructor(props){
-        super(props)
-    }
+
 
     render(){
         return(

@@ -112,7 +112,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
             flexcol.push(
               (x1!=null) ?
               <div key={x1.id}  className="col-4 m-0 p-0">
-              <img onClick={()=>this.handleImageModal(x1.title,x1.desc,x1.src, x1.type)}  data-toggle="modal" data-target="#exampleModal" src={x1.src} style={{width:'100%'}}></img>
+              <img onClick={()=>this.handleImageModal(x1.title,x1.desc,x1.src, x1.type)} alt={x1.title}  data-toggle="modal" data-target="#exampleModal" src={x1.src} style={{width:'100%'}}></img>
               </div>
               :
               <div key={rows+'-'+col} className="col-4 m-0 p-0"></div>
@@ -135,7 +135,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
           
           
           toggle(){
-            if(this.state.isnavtoggled==false){
+            if(this.state.isnavtoggled===false){
               this.setState({isnavtoggled:true})
             }else {
               this.setState({isnavtoggled:false})
@@ -236,7 +236,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
               <BrowserRouter>
               <div className="">  
               {
-                (this.state.isnavtoggled==true)?
+                (this.state.isnavtoggled===true)?
                 <div style={{visibility:'hidden'}}>
                 
                 
@@ -260,7 +260,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
                   
                   <div className="flexcol1 flex-v-center flex-h-center ">
                   <NavLink exact to="/#about" onClick={this.goToAbout}>
-                  {(this.state.path=='/' || this.state.path=='/#about' )
+                  {(this.state.path==='/' || this.state.path==='/#about' )
                   ?
                   <div className="rotation selected">{Helper.translate("ABOUT", this.state.lang)}</div>
                   :
@@ -275,7 +275,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
                 
                 <div className="flexcol1 flex-v-center flex-h-center ">
                 <NavLink exact to="/#references"   onClick={this.goToReferences}>
-                {(this.state.path=='/#references')
+                {(this.state.path==='/#references')
                 ?
                 <div className="rotation selected">{Helper.translate("REFERENCES", this.state.lang)}</div>
                 :
@@ -289,7 +289,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
               
               <div className="flexcol1 flex-v-center flex-h-center ">
               <NavLink exact to="/#contact"   onClick={this.goToContact}>
-              {(this.state.path=='/#contact')
+              {(this.state.path==='/#contact')
               ?
               <div className="rotation selected">{Helper.translate("CONTACT", this.state.lang)}</div>
               :
@@ -304,19 +304,19 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
             </nav>
             :
             <div>
-            {(this.state.isnavtoggled==true)&&
+            {(this.state.isnavtoggled===true)&&
               <nav className="smallNav h3 text-light overfl" style={{position:'fixed', top:'0',left:'0', right:'0',height:'200vh', background:'rgba(0,0,0,0.7)',zIndex:30000 }} onClick={this.toggle}>
               
               <div className="flexrow pt-2" style={{minHeight:'56px'}}>
-              <img src={logo} className='logo pt-1' style={{filter: 'invert(100%)'}}></img>
-              <span class="fas fa-times h4 pt-1 pr-2 mr-2" style={{cursor:'pointer',position:'fixed', right:0}} onClick={this.props.toggle}></span>
+              <img src={logo} className='logo pt-1' style={{filter: 'invert(100%)'}} alt="Logo"></img>
+              <span className="fas fa-times h4 pt-1 pr-2 mr-2" style={{cursor:'pointer',position:'fixed', right:0}} onClick={this.props.toggle}></span>
               
               </div>
               <div className="text-center">
               
               <div className="mt-4 p-3" style={{display:'block'}}>
               <NavLink exact to="/#about" style={{display:'inline-block'}}>
-              {(this.state.path=='/'  || this.state.path=='/#about' )
+              {(this.state.path==='/'  || this.state.path==='/#about' )
               ?
               <span className="selected"  onClick={this.goToAbout}>{Helper.translate("ABOUT", this.state.lang)}</span>
               :
@@ -328,7 +328,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
             <div className=" p-3" style={{display:'block'}}>
             <NavLink exact to="/#references"  style={{display:'inline-block'}}>
             
-            {(this.state.path=='/#references')
+            {(this.state.path==='/#references')
             ?
             <span className="selected"  onClick={this.goToReferences}>{Helper.translate("REFERENCES", this.state.lang)}</span>
             :
@@ -340,7 +340,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
           <div className=" p-3" style={{display:'block'}}>
           
           <NavLink exact to="/#contact" style={{display:'inline-block'}} onClick={()=>this.goToPath('/contact')}>
-          {this.state.path=='/#contact'
+          {this.state.path==='/#contact'
           ?
           <span className="selected"  onClick={this.goToContact}>{Helper.translate("CONTACT", this.state.lang)}</span>
           :
@@ -351,7 +351,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
         <div className=" p-3" style={{display:'block'}}>
         
         <NavLink exact to="/privacypolicy" style={{display:'inline-block'}} onClick={()=>this.goToPath('/privacypolicy')}>
-        {this.state.path=='/privacypolicy'
+        {this.state.path==='/privacypolicy'
         ?
         <span className="selected"  onClick={this.toggle}>{Helper.translate("PRIVACYPOLICY", this.state.lang)}</span>
         :
@@ -362,7 +362,7 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
       
       
       <NavLink exact to="/imprint" style={{display:'inline-block'}} onClick={()=>this.goToPath('/imprint')}>
-      {this.state.path=='/imprint'
+      {this.state.path==='/imprint'
       ?
       <span className="selected"  onClick={this.toggle}>{Helper.translate("IMPRINT", this.state.lang)}</span>
       :

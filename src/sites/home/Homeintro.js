@@ -15,7 +15,7 @@ export default class HomeIntro extends Component {
 {this.props.width>=756 ?
             <div className="flexrow " style={{height:'100vh',minHeight:'500px'}}>
                 <div className="flexcol5 flex-h-center flex-v-center">
-                    <img src={logo} className="introLogo"></img>
+                    <img src={logo} className="introLogo" alt="logo"></img>
 
                 </div>
 
@@ -38,7 +38,7 @@ export default class HomeIntro extends Component {
 
 
                 <div className="mediaDrop flexcol1 flex-h-center">
-                    <img src={arrowdown} className="arrowDown"></img>
+                    <img src={arrowdown} className="arrowDown" alt="arrow"></img>
                 </div>
             </div>
 

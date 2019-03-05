@@ -5,12 +5,6 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { goToTop } from 'react-scrollable-anchor'
 
 export default class Footer extends Component {
-    constructor(props){
-        super(props);
-    }
-
-
-
     render(){
         
         return(
@@ -110,7 +104,7 @@ export default class Footer extends Component {
                     <span>
 
                 <NavLink exact to="/privacypolicy" onClick={()=>goToTop()}>
-                  {(this.props.path=='/privacypolicy' )
+                  {(this.props.path==='/privacypolicy' )
                   ?
                   <span className="m-4 selectedw text-light">
                   {Helper.translate("PRIVACYPOLICY",this.props.lang)}
@@ -124,7 +118,7 @@ export default class Footer extends Component {
                 </NavLink>
 
                 <NavLink exact to="/imprint"  onClick={()=>goToTop()}>
-                  {(this.props.path=='/imprint' )
+                  {(this.props.path==='/imprint' )
                   ?
                   <span className="p-m selectedw text-light">
                   {Helper.translate("IMPRINT",this.props.lang)}
@@ -139,10 +133,10 @@ export default class Footer extends Component {
                     </span>
                     }
                         <span className="m-4 text-light">
-                        <a class="text-light" href="https://www.instagram.com/kxvinpinoy/">INSTAGRAM</a> 
+                        <a className="text-light" href="https://www.instagram.com/kxvinpinoy/">INSTAGRAM</a> 
                         </span>
                         <span className="m-4 text-light">
-                            <a class="text-light" href="https://www.xing.com/profile/Kevin_Herlt2/cv?sc_o=mxb_p">XING</a>
+                            <a className="text-light" href="https://www.xing.com/profile/Kevin_Herlt2/cv?sc_o=mxb_p">XING</a>
                         </span>
                     </div>
 

@@ -25,7 +25,7 @@ export default class Header extends Component{
                 <div className="flexcol3 flex-v-center" style={{minHeight:'56px'}}>
                 <div>
 
-                    <img src={logo} className='logo' style={{float:'left'}}></img>
+                    <img src={logo} className='logo' style={{float:'left'}} alt="logo"></img>
                     {this.props.width<756 &&
                     <span className="fas fa-bars h4 pr-2 mr-2" style={{cursor:'pointer',position:'fixed', right:0}} onClick={this.props.toggle}></span>
                     }
@@ -52,7 +52,7 @@ export default class Header extends Component{
                             </div>
                         </div>
                         <div className="flexcol1 flex-h-center pr-2 flex-v-center title text-right">
-                        {this.props.lang == 1 ?
+                        {this.props.lang === 1 ?
                     <span className="title">
                     <b><span onClick={()=>this.handleLanguage(1)} style={{cursor:'pointer'}}>DE</span> </b>
                     <b className="p-2">|</b>

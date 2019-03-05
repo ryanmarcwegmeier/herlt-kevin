@@ -133,10 +133,10 @@ export default class Footer extends Component {
                     </span>
                     }
                         <span className="m-4 text-light">
-                        <a className="text-light" href="https://www.instagram.com/kxvinpinoy/">INSTAGRAM</a> 
+                        <a target="_blank" className="text-light" href="https://www.instagram.com/kxvinpinoy/">INSTAGRAM</a> 
                         </span>
                         <span className="m-4 text-light">
-                            <a className="text-light" href="https://www.xing.com/profile/Kevin_Herlt2/cv?sc_o=mxb_p">XING</a>
+                        <a target="_blank" className="text-light" href="https://www.xing.com/profile/Kevin_Herlt2/cv?sc_o=mxb_p">XING</a>
                         </span>
                     </div>
 

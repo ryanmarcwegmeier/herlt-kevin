@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Helper from '../../component/Helper'
 import ReactHtmlParser from 'react-html-parser';
 import Footer from '../../component/Footer'
-export default class Impressum extends Component{
+
+export default class Imprint extends Component{
 
     componentDidMount(){
         this.props.setPath("/imprint")

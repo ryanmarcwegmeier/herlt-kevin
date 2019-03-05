@@ -9,9 +9,8 @@ import Helper from './component/Helper'
 
 import Home from './sites/home/Home'
 import Header from './component/Header'
-import Impressum from './sites/impressum/Impressum'
 import Policy from './sites/policy/Policy'
-
+import Imprint from './sites/imprint/Imprint'
 
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { goToAnchor } from "react-scrollable-anchor";
@@ -210,10 +209,10 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
            this.setState({prints:this.createListView(images,3)})
 
            images = [
-            {"id":16,"type":"Digital", "title":"Bruhn Metallbau Divi Website", "src":img16,'desc':"This website was built with a Divi Theme on Wordpress. It was created during my professional training in Euphorika. To the website <a href='https://www.bruhn-metallbau.de/'>https://www.bruhn-metallbau.de/</a>"},
-            {"id":17,"type":"Digital", "title":"DSL Divi Website", "src":img17,'desc':"I designed the website during my professional training in Euphorika. To the website <a href='https://www.silkdarling.com/'>https://www.silkdarling.com/</a>"},
-            {"id":18,"type":"Digital", "title":"Elsa Brändström Haus Webdesign", "src":img18,'desc':"I contributed to the design of this website. It was designed during my professional training in Euphorika. To the website <a href='https://ebh-hamburg.de'> https://ebh-hamburg.de/ </a>"},
-            {"id":19,"type":"Digital", "title":"Silk Darling Webdesign", "src":img19,'desc':"I designed the website during my professional training in Euphorika. To the website <a href='https://www.silkdarling.com/'>https://www.silkdarling.com/ </a>"},
+            {"id":16,"type":"Digital", "title":"Bruhn Metallbau Divi Website", "src":img16,'desc':"This website was built with a Divi Theme on Wordpress. It was created during my professional training in Euphorika. To the website <a target='_blank' href='https://www.bruhn-metallbau.de/'>https://www.bruhn-metallbau.de/</a>"},
+            {"id":17,"type":"Digital", "title":"DSL Divi Website", "src":img17,'desc':"I designed the website during my professional training in Euphorika. To the website <a target='_blank' href='https://www.silkdarling.com/'>https://www.silkdarling.com/</a>"},
+            {"id":18,"type":"Digital", "title":"Elsa Brändström Haus Webdesign", "src":img18,'desc':"I contributed to the design of this website. It was designed during my professional training in Euphorika. To the website <a target='_blank' href='https://ebh-hamburg.de'> https://ebh-hamburg.de/ </a>"},
+            {"id":19,"type":"Digital", "title":"Silk Darling Webdesign", "src":img19,'desc':"I designed the website during my professional training in Euphorika. To the website <a target='_blank' href='https://www.silkdarling.com/'>https://www.silkdarling.com/ </a>"},
             {"id":20,"type":"Digital", "title":"Pockets Webdesign", "src":img20,'desc':"I designed the website for the company consultant Pockets during my training in Euphorika."},
           ] 
              
@@ -405,8 +404,8 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
 
 <main className={!this.state.isnavtoggled?"flexcol13 mt56 paddingleft":'flexcol13 mt56 paddingleft '} style={{position:'relative'}}>
 <Route exact path='/' render={(props) => <Home {...props} lang={this.state.lang}  path={this.state.path} imgUrl={this.state.imgUrl} imgDes={this.state.imgDes} imgType={this.state.imgType} imgTitle={this.state.imgTitle} setPath={this.setPath} width={this.state.width}  imagearray={this.state.imagearray} prints={this.state.prints} blender={this.state.blender} digital={this.state.digital} />}/>
-<Route exact path='/imprint' render={(props) => <Impressum {...props} setPath={this.setPath} lang={this.state.lang} path={this.state.path}  width={this.state.width} />}/>
 <Route exact path='/privacypolicy' render={(props) => <Policy {...props} setPath={this.setPath} lang={this.state.lang} path={this.state.path}  width={this.state.width} />}/>
+<Route exact path='/imprint' render={(props) => <Imprint {...props} setPath={this.setPath} lang={this.state.lang} path={this.state.path}  width={this.state.width} />}/>
 
 </main>
 

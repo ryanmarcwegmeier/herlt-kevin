@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../styles/container.css';
 import Helper from './Helper'
 import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { goToTop } from 'react-scrollable-anchor'
 
 export default class Footer extends Component {
     constructor(props){
@@ -11,6 +12,7 @@ export default class Footer extends Component {
 
 
     render(){
+        
         return(
             <footer className="container-fluid pb-0 mb-0">
         
@@ -106,20 +108,40 @@ export default class Footer extends Component {
                     {window.innerWidth>=490 &&
                     
                     <span>
-                        <span className="p-4">
-                        PRIVACYPOLICY
-                        </span>
-                        <span className="p-4">
-                        <NavLink exact to="/imprint">
-                        IMPRINT 
-                        </NavLink>
-                        </span>
+
+                <NavLink exact to="/privacypolicy" onClick={()=>goToTop()}>
+                  {(this.props.path=='/privacypolicy' )
+                  ?
+                  <span className="m-4 selectedw text-light">
+                  {Helper.translate("PRIVACYPOLICY",this.props.lang)}
+                  </span>                  
+                  :
+                    <span className="m-4 text-light">
+                    {Helper.translate("PRIVACYPOLICY",this.props.lang)}
+                    </span>                  
+                    }
+                
+                </NavLink>
+
+                <NavLink exact to="/imprint"  onClick={()=>goToTop()}>
+                  {(this.props.path=='/imprint' )
+                  ?
+                  <span className="p-m selectedw text-light">
+                  {Helper.translate("IMPRINT",this.props.lang)}
+                  </span>                  
+                  :
+                    <span className="m-4 text-light">
+                    {Helper.translate("IMPRINT",this.props.lang)}
+                    </span>                  
+                    }
+                
+                </NavLink>
                     </span>
                     }
-                        <span className="p-4">
+                        <span className="m-4">
                         INSTAGRAM 
                         </span>
-                        <span className="p-4">
+                        <span className="m-4">
                         XING
                         </span>
                     </div>

@@ -1,4 +1,7 @@
 const liste = {
+    "Phone number":"Telefonnummer",
+    "Phone":"Telefon",
+    "E-mail address":"E-Mail Adresse",
     "ABOUT":"ÜBER",
     "REFERENCES":"REFERENZEN",
     "CONTACT":"KONTAKT",
@@ -57,9 +60,20 @@ const liste = {
     "This website was built with a Divi Theme on Wordpress. It was created during my professional training in Euphorika. To the website <a href='https://www.bruhn-metallbau.de/'>https://www.bruhn-metallbau.de/</a>":"Diese Webseite wurde mit einem Divi Theme auf Wordpress aufgebaut. Es wurde während meiner Ausbildung in Euphorika erstellt. Zur Webseite <a href='https://www.bruhn-metallbau.de'>https://www.bruhn-metallbau.de/",
     "I designed the website during my professional training in Euphorika. To the website <a href='https://www.silkdarling.com/'>https://www.silkdarling.com/ </a>":"Diese Website hab ich während meiner Ausbildung in Euphorika gestaltet. Zur Website <a href='https://www.silkdarling.com/'>https://www.silkdarling.com/ </a>",
     "I contributed to the design of this website. It was designed during my professional training in Euphorika. To the website <a href='https://ebh-hamburg.de'> https://ebh-hamburg.de/ </a>":"Bei dieser Webseite habe ich am design mitgewirkt. Sie wurde während meiner Ausbildung in Euphorika gestaltet. Zur Webseite <a href='https://ebh-hamburg.de'> https://ebh-hamburg.de/ </a>",
-    
+    "IMPRINT":"IMPRESSUM",
+    "PRIVACYPOLICY":"DATENSCHUTZ",
+    "Information according to § 5 TMG":"Angaben gem. § 5 TMG",
+    "By using our website, you consent to the collection, processing and use of data in accordance with the following description. Our website can generally be visited without registration. Data such as pages accessed or names of files accessed, date and time are stored on the server for statistical purposes without this data being directly related to your person. Personal data, in particular name, address or E-mail address are collected as far as possible on a voluntary basis. The data will not be passed on to third parties without your consent. Privacy policy of this website created by the generator of Muster-Datenschutzerklärung von <a href='https://www.anwalt.de/'>https://www.anwalt.de/</a>":"Durch die Nutzung unserer Website erklären Sie sich mit der Erhebung, Verarbeitung und Nutzung von Daten gemäß der nachfolgenden Beschreibung einverstanden. Unsere Website kann grundsätzlich ohne Registrierung besucht werden. Dabei werden Daten wie beispielsweise aufgerufene Seiten bzw. Namen der abgerufenen Datei, Datum und Uhrzeit zu statistischen Zwecken auf dem Server gespeichert, ohne dass diese Daten unmittelbar auf Ihre Person bezogen werden. Personenbezogene Daten, insbesondere Name, Adresse oder E-Mail-Adresse werden soweit möglich auf freiwilliger Basis erhoben. Ohne Ihre Einwilligung erfolgt keine Weitergabe der Daten an Dritte. Quelle: Muster-Datenschutzerklärung von <a href='https://www.anwalt.de/'>https://www.anwalt.de/</a>",
 
-    
+    "Operator and contact":"Betreiber und Kontakt",
+    "Online settlement of disputes pursuant to Art. 14 para. 1 ODR-VO":"Online-Streitbeilegung gemäß Art. 14 Abs. 1 ODR-VO",
+
+    "The European Commission provides a platform for Online Dispute Resolution (OS), which can be found at <a href='http://ec.europa.eu/consumersodr/'> http://ec.europa.eu/consumersodr/ </a>.":"Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter <a href='http://ec.europa.eu/consumersodr/'> http://ec.europa.eu/consumersodr/ </a> finden.",
+
+    "Imprint of this website created by the generator of <a href='http://www.deutsche-anwaltshotline.de/recht-auf-ihrer-website/impressum-generator'>Deutsche Anwaltshotline AG</a>":"Impressum dieser Website erstellt über den Generator der <a href='http://www.deutsche-anwaltshotline.de/recht-auf-ihrer-website/impressum-generator'>Deutsche Anwaltshotline AG</a>",
+
+
+    "PRIVACY POLICY":"Datenschutzerklärung",
     "Silk Darling exhibitor":"Silk Darling Aussteller",
     "This is a design for an exhibitor of Silk Darling. This layout was created during my training in Euphorika.":"Das ist ein design für einen Aussteller von Silk Darling. Dieses Layout wurde während meiner Ausbildung in Euphorika erstellt.",
         
@@ -94,7 +108,10 @@ const liste = {
     "PRIVACY POLICY":"DATENSCHUTZ",
     "IMPRINT":"IMPRESSUM",
     "General Privacy Policy":"Allgemeine Datenschutzerklärung",
-    "By using our website, you consent to the collection, processing and use of data in accordance with the following description. Our website can generally be visited without registration. Data such as pages accessed or names of files accessed, date and time are stored on the server for statistical purposes without this data being directly related to your person. Personal data, in particular name, address or E-mail address are collected as far as possible on a voluntary basis. The data will not be passed on to third parties without your consent. Privacy policy of this website created by the generator of Muster-Datenschutzerklärung von anwalt.de":"Durch die Nutzung unserer Website erklären Sie sich mit der Erhebung, Verarbeitung und Nutzung von Daten gemäß der nachfolgenden Beschreibung einverstanden. Unsere Website kann grundsätzlich ohne Registrierung besucht werden. Dabei werden Daten wie beispielsweise aufgerufene Seiten bzw. Namen der abgerufenen Datei, Datum und Uhrzeit zu statistischen Zwecken auf dem Server gespeichert, ohne dass diese Daten unmittelbar auf Ihre Person bezogen werden. Personenbezogene Daten, insbesondere Name, Adresse oder E-Mail-Adresse werden soweit möglich auf freiwilliger Basis erhoben. Ohne Ihre Einwilligung erfolgt keine Weitergabe der Daten an Dritte. Quelle: Muster-Datenschutzerklärung von anwalt.de",
+    "By using our website, you consent to the collection, processing and use of data in accordance with the following description. Our website can generally be visited without registration. Data such as pages accessed or names of files accessed, date and time are stored on the server for statistical purposes without this data being directly related to your person. Personal data, in particular name, address or E-mail address are collected as far as possible on a voluntary basis. The data will not be passed on to third parties without your consent.":"Durch die Nutzung unserer Website erklären Sie sich mit der Erhebung, Verarbeitung und Nutzung von Daten gemäß der nachfolgenden Beschreibung einverstanden. Unsere Website kann grundsätzlich ohne Registrierung besucht werden. Dabei werden Daten wie beispielsweise aufgerufene Seiten bzw. Namen der abgerufenen Datei, Datum und Uhrzeit zu statistischen Zwecken auf dem Server gespeichert, ohne dass diese Daten unmittelbar auf Ihre Person bezogen werden. Personenbezogene Daten, insbesondere Name, Adresse oder E-Mail-Adresse werden soweit möglich auf freiwilliger Basis erhoben. Ohne Ihre Einwilligung erfolgt keine Weitergabe der Daten an Dritte.",
+    
+    "Privacy policy of this website created by the generator of Muster-Datenschutzerklärung von <a href='https://www.anwalt.de/'>https://www.anwalt.de/</a>":"Quelle: Muster-Datenschutzerklärung von <a href='https://www.anwalt.de/'>https://www.anwalt.de/</a>",
+    
     "Primary school Tannenweg, Glinde":"Grundschule Tannenweg, Glinde",
     "Catholic school St. Paulus":"Katholische Schule St. Paulus, Hamburg",
     "Graduation: MSA":"Abschluss: MSA",

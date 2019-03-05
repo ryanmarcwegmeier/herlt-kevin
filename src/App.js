@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import Helper from './component/Helper'
 import {
   Route,
   BrowserRouter,
   //NavLink
 } from "react-router-dom";
 
+import Helper from './component/Helper'
 
 import Home from './sites/home/Home'
-import Contact from './sites/contact/Contact'
 import Header from './component/Header'
 import Impressum from './sites/impressum/Impressum'
+import Policy from './sites/policy/Policy'
 
 
 import { NavHashLink as NavLink } from 'react-router-hash-link';
@@ -261,9 +261,9 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
                   <NavLink exact to="/#about" onClick={this.goToAbout}>
                   {(this.state.path=='/' || this.state.path=='/#about' )
                   ?
-                  <div className="rotation selected">ABOUT</div>
+                  <div className="rotation selected">{Helper.translate("ABOUT", this.state.lang)}</div>
                   :
-                  <div className="rotation">ABOUT</div>
+                  <div className="rotation">{Helper.translate("ABOUT", this.state.lang)}</div>
                   
                 }
                 
@@ -276,9 +276,9 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
                 <NavLink exact to="/#references"   onClick={this.goToReferences}>
                 {(this.state.path=='/#references')
                 ?
-                <div className="rotation selected">REFERENCES</div>
+                <div className="rotation selected">{Helper.translate("REFERENCES", this.state.lang)}</div>
                 :
-                <div className="rotation">REFERENCES</div>
+                <div className="rotation">{Helper.translate("REFERENCES", this.state.lang)}</div>
                 
               }
               </NavLink>
@@ -290,9 +290,9 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
               <NavLink exact to="/#contact"   onClick={this.goToContact}>
               {(this.state.path=='/#contact')
               ?
-              <div className="rotation selected">CONTACT</div>
+              <div className="rotation selected">{Helper.translate("CONTACT", this.state.lang)}</div>
               :
-              <div className="rotation">CONTACT</div>
+              <div className="rotation">{Helper.translate("CONTACT", this.state.lang)}</div>
               
             }                
             </NavLink>
@@ -317,9 +317,9 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
               <NavLink exact to="/#about" style={{display:'inline-block'}}>
               {(this.state.path=='/'  || this.state.path=='/#about' )
               ?
-              <span className="selected"  onClick={this.goToAbout}>ABOUT</span>
+              <span className="selected"  onClick={this.goToAbout}>{Helper.translate("ABOUT", this.state.lang)}</span>
               :
-              <span onClick={this.goToAbout}>ABOUT</span>
+              <span onClick={this.goToAbout}>{Helper.translate("ABOUT", this.state.lang)}</span>
             }
             </NavLink>
             </div>
@@ -329,9 +329,9 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
             
             {(this.state.path=='/#references')
             ?
-            <span className="selected"  onClick={this.goToReferences}>REFERENCES</span>
+            <span className="selected"  onClick={this.goToReferences}>{Helper.translate("REFERENCES", this.state.lang)}</span>
             :
-            <span  onClick={this.goToReferences}>REFERENCES</span>
+            <span  onClick={this.goToReferences}>{Helper.translate("REFERENCES", this.state.lang)}</span>
           }
           
           </NavLink>
@@ -341,9 +341,9 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
           <NavLink exact to="/#contact" style={{display:'inline-block'}} onClick={()=>this.goToPath('/contact')}>
           {this.state.path=='/#contact'
           ?
-          <span className="selected"  onClick={this.goToContact}>CONTACT</span>
+          <span className="selected"  onClick={this.goToContact}>{Helper.translate("CONTACT", this.state.lang)}</span>
           :
-          <span  onClick={this.goToContact}>CONTACT</span>
+          <span  onClick={this.goToContact}>{Helper.translate("CONTACT", this.state.lang)}</span>
         }              </NavLink>
         
         </div>
@@ -352,9 +352,9 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
         <NavLink exact to="/privacypolicy" style={{display:'inline-block'}} onClick={()=>this.goToPath('/privacypolicy')}>
         {this.state.path=='/privacypolicy'
         ?
-        <span className="selected"  onClick={this.toggle}>PRIVACYPOLICY</span>
+        <span className="selected"  onClick={this.toggle}>{Helper.translate("PRIVACYPOLICY", this.state.lang)}</span>
         :
-        <span  onClick={this.toggle}>PRIVACYPOLICY</span>
+        <span  onClick={this.toggle}>{Helper.translate("PRIVACYPOLICY", this.state.lang)}</span>
       }              </NavLink>
       </div>
       <div className=" p-3" style={{display:'block'}}>
@@ -363,15 +363,34 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
       <NavLink exact to="/imprint" style={{display:'inline-block'}} onClick={()=>this.goToPath('/imprint')}>
       {this.state.path=='/imprint'
       ?
-      <span className="selected"  onClick={this.toggle}>IMPRINT</span>
+      <span className="selected"  onClick={this.toggle}>{Helper.translate("IMPRINT", this.state.lang)}</span>
       :
-      <span  onClick={this.toggle}>IMPRINT</span>
+      <span  onClick={this.toggle}>{Helper.translate("IMPRINT", this.state.lang)}</span>
     }              </NavLink>
     </div>
     </div>
     
     <div className="h5" style={{position:'fixed',bottom:0, left:'calc(50vw - 59.02px / 2)'}}>
-    <span>DE</span>|<span>EN</span>
+    {this.state.lang?
+    <span>
+    <span onClick={()=>this.handleLang(1)} style={{cursor:"pointer"}}>
+    <b>DE</b>
+    </span>|
+    <span onClick={()=>this.handleLang(0)} style={{cursor:"pointer"}}>
+      EN
+    </span>
+    </span>
+    :
+    <span>
+    <span onClick={()=>this.handleLang(1)} style={{cursor:"pointer"}}>
+      DE
+    </span>|
+    <span onClick={()=>this.handleLang(0)} style={{cursor:"pointer"}}>
+    <b>EN</b>
+    </span>
+    </span>
+    
+}
     </div>
     </nav>
   }
@@ -385,7 +404,8 @@ import img23 from './images/Blender/silvertexture-blender-web.jpg';
 
 <main className={!this.state.isnavtoggled?"flexcol13 mt56 paddingleft":'flexcol13 mt56 paddingleft '} style={{position:'relative'}}>
 <Route exact path='/' render={(props) => <Home {...props} lang={this.state.lang}  path={this.state.path} imgUrl={this.state.imgUrl} imgDes={this.state.imgDes} imgTitle={this.state.imgTitle} setPath={this.setPath} width={this.state.width}  imagearray={this.state.imagearray} prints={this.state.prints} blender={this.state.blender} digital={this.state.digital} />}/>
-<Route exact path='/imprint' render={(props) => <Impressum {...props} setPath={this.setPath} lang={this.state.lang}  width={this.state.width} />}/>
+<Route exact path='/imprint' render={(props) => <Impressum {...props} setPath={this.setPath} lang={this.state.lang} path={this.state.path}  width={this.state.width} />}/>
+<Route exact path='/privacypolicy' render={(props) => <Policy {...props} setPath={this.setPath} lang={this.state.lang} path={this.state.path}  width={this.state.width} />}/>
 
 </main>
 

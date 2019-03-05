@@ -53,11 +53,7 @@ export default class Home extends Component{
         // window.location.hash = '#'+p[1];    
     }
 
-    componentDidMount(){
-        if(window.location.pathname+window.location.hash == "/"){
-            this.props.setPath("/about")
-        }
-    }
+
     
         
     
@@ -90,6 +86,9 @@ export default class Home extends Component{
             </div>
             </ScrollTrigger>
             </ScrollableAnchor>
+
+            <div style={{position:'relative', height:'50px'}}>
+            </div>
             
             <ScrollableAnchor id={'references'}>
             <div>
@@ -108,7 +107,7 @@ export default class Home extends Component{
 
             <ScrollTrigger onEnter={()=>this.onEnterViewport("/#contact")} >
 
-            <Footer setPath={this.setPath} lang ={this.props.lang}></Footer>
+            <Footer setPath={this.props.setPath} lang ={this.props.lang} path={this.props.path}></Footer>
             </ScrollTrigger>
 
             </div>

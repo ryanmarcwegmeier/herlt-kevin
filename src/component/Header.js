@@ -31,11 +31,13 @@ export default class Header extends Component{
                     }
                 </div>
                 </div>
+                {window.innerWidth>=756 &&
                 <div className="flexcol1 flex-v-center flex-h-center title" style={{letterSpacing:'3px', fontSize:'0.8em',color:'#505050'}}>
                 GRAPHICDESIGNER
                     
                     
                 </div>
+                }
                 {this.props.width>=756
                 &&
 

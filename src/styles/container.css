@@ -8,6 +8,7 @@ body {
     flex-direction: column !important;
 }
 
+
 @media screen and (min-width:756px){
   .paddingleft{
     margin-left: 47px; 
@@ -242,9 +243,12 @@ body {
 
   .selected{
     border-bottom: 1px solid #505050;
+  } 
+  .selectedw{
+    border-bottom: 1px solid #fff;
   }
 
-  @media screen and (max-width: 755px) {
+  @media screen and (max-width: 756px) {
     .selected{
       border-bottom: 1px solid white;
     }

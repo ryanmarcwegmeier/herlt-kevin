@@ -26,17 +26,18 @@ export default class Home extends Component{
             imgUrl:"",
             imgDes:"",
             imgTitle:"",
+            imgType:"",
         }
         
-        configureAnchors({offset: -60, scrollDuration: 2000})
+        configureAnchors({offset: -60, scrollDuration: 1000})
         
         this.handleImageModal = this.handleImageModal.bind(this);
         this.onEnterViewport = this.onEnterViewport.bind(this)
         this.onExitViewport = this.onExitViewport.bind(this)
     }
     
-    handleImageModal(title,describtion,url){
-        this.setState({imgUrl:url,imgTitle:title,imgDes:describtion});
+    handleImageModal(title,describtion,url,type){
+        this.setState({imgUrl:url,imgTitle:title,imgDes:describtion, imgType:type});
     }
     
      
@@ -62,7 +63,7 @@ export default class Home extends Component{
             <div>
             
             
-            <ImageModal lang={this.props.lang} imgTitle={this.props.imgTitle} imgUrl={this.props.imgUrl} imgDes={this.props.imgDes}></ImageModal>
+            <ImageModal lang={this.props.lang} imgType={this.props.imgType} imgTitle={this.props.imgTitle} imgUrl={this.props.imgUrl} imgDes={this.props.imgDes}></ImageModal>
             
             <div className="container-fluid" style={{position:'relative',background:'white',zIndex:100}}>
             

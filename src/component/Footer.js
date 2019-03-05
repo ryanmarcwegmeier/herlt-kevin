@@ -138,11 +138,11 @@ export default class Footer extends Component {
                 </NavLink>
                     </span>
                     }
-                        <span className="m-4">
-                        INSTAGRAM 
+                        <span className="m-4 text-light">
+                        <a class="text-light" href="https://www.instagram.com/kxvinpinoy/">INSTAGRAM</a> 
                         </span>
-                        <span className="m-4">
-                        XING
+                        <span className="m-4 text-light">
+                            <a class="text-light" href="https://www.xing.com/profile/Kevin_Herlt2/cv?sc_o=mxb_p">XING</a>
                         </span>
                     </div>
 

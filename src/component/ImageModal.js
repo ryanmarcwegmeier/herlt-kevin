@@ -77,8 +77,9 @@ export default class ImageModal extends Component{
                 }
                 
                 {this.state.small?
-                    <div className="col-md-6 p-3">
-                    <h5 className="p-1">{Helper.translate(this.props.imgTitle,this.props.lang)}</h5>
+                    <div className="col-md-6 p-3" style={{overflow:"scroll"}}>
+                    <h5 className="p-1"><u>{Helper.translate(this.props.imgType,this.props.lang)}</u></h5>
+                    <h4 className="p-1">{Helper.translate(this.props.imgTitle,this.props.lang)}</h4>
                     <div className="flexrow" style={{height:"100%"}}>
                     {
                          window.innerWidth>=768?

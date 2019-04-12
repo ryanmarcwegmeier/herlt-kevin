@@ -9,11 +9,11 @@ export default class Footer extends Component {
         
         return(
             <footer className="container-fluid pb-0 mb-0">
-        
 
-                
+
+
                 <div className="footerNav">
-                    <section className="text-light p-5">
+                    <section className="text-dark p-5">
                     <h3 className="pb-2"><span style={{letterSpacing: '3px'}}>{Helper.translate("CONTACT",this.props.lang)}</span> </h3>
                     <div>
                     {Helper.translate("I am always looking for new adventures and challenges. So if you are interested, just drop me a quick line and I will get in contact with you.",this.props.lang)}    

@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://ryanmarcwegmeier.github.io/herlt-kevin",
   "dependencies": {
+    "body-scroll-lock": "^2.6.1",
     "gh-pages": "^2.0.1",
     "mdbootstrap": "^4.7.3",
     "react": "^16.8.2",

@@ -5,7 +5,7 @@ const liste = {
     "ABOUT":"ÜBER",
     "CONTACT":"KONTAKT",
     "I'm":"Ich bin",
-    "a graphicdesigner with passion and love for detail. My journey as a designer startet in an agile creative agency in Hamburg. Enjoy this glimpse of my creative endevours and get to know the man behind the keyboard.":"ein Mediengestalter mit Leidenschaft und Liebe fürs Detail. Meine Reise als Designer begann in einer agilen Kreativagentur in Hamburg. Genießt den Einblick in meine kreativen Arbeiten und lernt den Mann hinter der Tastatur kennen.",
+    "a graphicdesigner with passion and love for detail. My journey as a designer started in an agile creative agency in Hamburg. Enjoy this glimpse of my creative endevours and get to know the man behind the keyboard.":"ein Mediengestalter mit Leidenschaft und Liebe fürs Detail. Meine Reise als Designer begann in einer agilen Kreativagentur in Hamburg. Genießt den Einblick in meine kreativen Arbeiten und lernt den Mann hinter der Tastatur kennen.",
     "SKILLBAR":"FÄHIGKEITEN",
     "School":"Schulische",
     "Career":"Laufbahn",

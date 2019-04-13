@@ -325,7 +325,7 @@ class App extends Component {
                 "type": "",
                 "title": "DSL Divi Website",
                 "src": img17,
-                'desc': "I designed the website during my professional training in Euphorika. To the website <a target='_blank' href='https://www.silkdarling.com/'>https://www.silkdarling.com/</a>"
+                'desc': "This website was built with a Divi Theme on Wordpress. It was created during my professional training in Euphorika. To the website <a target='_blank' href='https://www.dsl-sachwert.de/'>www.dsl-sachwert.de </a>",
             },
             {
                 "id": 18,

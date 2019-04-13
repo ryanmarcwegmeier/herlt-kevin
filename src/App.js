@@ -19,16 +19,15 @@ import './styles/container.css'
 
 import logo from './images/kevin-logo.png';
 
-
-import img1 from './images/Logos/backshop-logo-web.jpg';
-import img2 from './images/Logos/bebop-logo-web.jpg';
-import img3 from './images/Logos/ebh-logo-web.jpg';
+import img1 from './images/Logos/ebh-logo-web.jpg';
+import img2 from './images/Logos/kasangga-youth-logo-web.jpg';
+import img3 from './images/Logos/silk-darling.jpg';
 import img4 from './images/Logos/ernst-luftig-logo-web.jpg';
-import img5 from './images/Logos/ham-logo-web.jpg';
+import img5 from './images/Logos/Nordprotect-logo-web.jpg';
 import img6 from './images/Logos/infomatiger-logo-web.jpg';
-import img7 from './images/Logos/kasangga-youth-logo-web.jpg';
-import img8 from './images/Logos/kevin-logo-web.jpg';
-import img9 from './images/Logos/silk-darling.jpg';
+import img7 from './images/Logos/backshop-logo-web.jpg';
+import img8 from './images/Logos/scc-logo.jpg';
+import img9 from './images/Logos/ham-logo-web.jpg';
 
 import img10 from './images/Print/ebh-print-web.jpg';
 import img11 from './images/Print/fsr-print-web.jpg';
@@ -110,7 +109,7 @@ class App extends Component {
                 }
                 flexcol.push(
                     (x1 != null) ?
-                        <div key={x1.id} className="col-4 m-0 p-0">
+                        <div key={x1.id} className="col-md-4 m-0 p-0">
                             <img onClick={() => this.handleImageModal(x1.title, x1.desc, x1.src, x1.type)}
                                  alt={x1.title} data-toggle="modal" data-target="#exampleModal" src={x1.src}
                                  style={{width: '100%'}}/>
@@ -138,12 +137,6 @@ class App extends Component {
     toggle() {
         if (this.state.isnavtoggled === false) {
             this.setState({isnavtoggled: true});
-alert()
-            window.addEventListener('DOMMouseScroll', function(e) {
-                alert()
-                e.preventDefault();
-
-            }, false);
             disableBodyScroll(this.targetElement);
         } else {
             this.setState({isnavtoggled: false})
@@ -195,105 +188,121 @@ alert()
 
     componentWillMount() {
         let images = [
+
             {
                 "id": 1,
-                "type": "Logo",
-                "title": "Der frische Backshop",
-                "src": img1,
-                "desc": "I developed this logo for a bakery in a petrol station Hessol in 2017 during my professional training in Euphorika."
-            },
-            {
-                "id": 2,
-                "type": "Logo",
-                "title": "Bebop",
-                "src": img2,
-                'desc': 'This Logo was made for a fictional softdrink brand'
-            },
-            {
-                "id": 3,
-                "type": "Logo",
+                "type": "",
                 "title": "Elsa Brändström Haus",
-                "src": img3,
+                "src": img1,
                 'desc': 'This Logo was made for a international seminar and conference venue. It was created during my professional training in the agency Euphorika.'
             },
+
+            {
+                "id": 2,
+                "type": "",
+                "title": "Kasangga Youth",
+                "src": img2,
+                'desc': 'I designed this logo in 2018 for my basketball team Kasanagga Youth.'
+            },
+
+            {
+                "id": 3,
+                "type": "",
+                "title": "Silk Darling",
+                "src": img3,
+                'desc': 'I designed this Logo back in 2017 for a silk pillow company.'
+            },
+
             {
                 "id": 4,
-                "type": "Logo",
+                "type": "",
                 "title": "Ernst Luftig Windparkwartung GmbH",
                 "src": img4,
                 'desc': 'This Logo was made for a fictional wind farm maintenance company.'
             },
-            {"id": 5, "type": "Logo", "title": "Ham", "src": img5, 'desc': 'Random Logo'},
+
+            {
+                "id": 5,
+                "type": "",
+                "title": "Nord Protect",
+                "src": img5,
+                'desc': 'The logo was created for a personal security company. It shows a sign in which a large broad employee of the company Nord Protect protects the person in front of him. This logo was created during my training in Euphorika.'
+            },
+
             {
                 "id": 6,
-                "type": "Logo",
+                "type": "",
                 "title": "Informatiger",
                 "src": img6,
                 'desc': 'This Logo was made for a student council for electrical engineering and computer science. It was made back in 2017.This Logo was created during my professional training in Euphorika'
             },
+
             {
                 "id": 7,
-                "type": "Logo",
-                "title": "Kasangga Youth",
+                "type": "",
+                "title": "Der frische Backshop",
                 "src": img7,
-                'desc': 'I designed this logo in 2018 for my basketball team Kasanagga Youth.'
+                "desc": "I developed this logo for a bakery in a petrol station Hessol in 2017 during my professional training in Euphorika."
             },
             {
                 "id": 8,
-                "type": "Logo",
-                "title": "Kevin Herlt",
+                "type": "",
+                "title": "Secret Cosmetic Club",
                 "src": img8,
-                'desc': 'I developed this logo for myself in 2018.'
+                'desc': 'This logo was made for a beauty webshop. It was made during my professional training in Euphorika.'
             },
+
             {
                 "id": 9,
-                "type": "Logo",
-                "title": "Silk Darling",
+                "type": "",
+                "title": "Ham",
                 "src": img9,
-                'desc': 'I designed this Logo back in 2017 for a silk pillow company.'
+                'desc': 'This Logo was made for a fictional brand'
             },
+
+
         ]
         this.setState({imagearray: this.createListView(images, 3)})
 
         images = [
             {
                 "id": 10,
-                "type": "Print",
+                "type": "",
                 "title": "Elsa Brändström Haus Pagedesign",
                 "src": img10,
                 'desc': 'I designed the layout which is oriented to the webdesign. It was created during my professional training in Euphorika.'
             },
             {
                 "id": 11,
-                "type": "Print",
+                "type": "",
                 "title": "FSR Flyer",
                 "src": img11,
                 'desc': 'I designed this flyer on customer request. It was created during my professional training in Euphorika.'
             },
             {
                 "id": 12,
-                "type": "Print",
+                "type": "",
                 "title": "Manager Magazin Illustration",
                 "src": img12,
                 'desc': 'I created the background of this page. I used stock pictures for the Illustration. It was created during my professional training in Euphorika'
             },
             {
                 "id": 13,
-                "type": "Print",
+                "type": "",
                 "title": "OnlYours Poster",
                 "src": img13,
                 'desc': 'I designed this Poster for a friend to help him for his school project.'
             },
             {
                 "id": 14,
-                "type": "Print",
+                "type": "",
                 "title": "Navis Heide Park invitation",
                 "src": img14,
                 'desc': "This invitation was for the company Navis who invited theiremployees to the amusement park 'Heide Park'. In this illustration, I have designed the compilation of the individual elements that come from Shutterstock."
             },
             {
                 "id": 15,
-                "type": "Print",
+                "type": "",
                 "title": "Silk Darling exhibitor",
                 "src": img15,
                 'desc': 'This is a design for an exhibitor of Silk Darling. This layout was created during my training in Euphorika.'
@@ -306,35 +315,35 @@ alert()
         images = [
             {
                 "id": 16,
-                "type": "Digital",
+                "type": "",
                 "title": "Bruhn Metallbau Divi Website",
                 "src": img16,
                 'desc': "This website was built with a Divi Theme on Wordpress. It was created during my professional training in Euphorika. To the website <a target='_blank' href='https://www.bruhn-metallbau.de/'>https://www.bruhn-metallbau.de/</a>"
             },
             {
                 "id": 17,
-                "type": "Digital",
+                "type": "",
                 "title": "DSL Divi Website",
                 "src": img17,
                 'desc': "I designed the website during my professional training in Euphorika. To the website <a target='_blank' href='https://www.silkdarling.com/'>https://www.silkdarling.com/</a>"
             },
             {
                 "id": 18,
-                "type": "Digital",
+                "type": "",
                 "title": "Elsa Brändström Haus Webdesign",
                 "src": img18,
                 'desc': "I contributed to the design of this website. It was designed during my professional training in Euphorika. To the website <a target='_blank' href='https://ebh-hamburg.de'> https://ebh-hamburg.de/ </a>"
             },
             {
                 "id": 19,
-                "type": "Digital",
+                "type": "",
                 "title": "Silk Darling Webdesign",
                 "src": img19,
                 'desc': "I designed the website during my professional training in Euphorika. To the website <a target='_blank' href='https://www.silkdarling.com/'>https://www.silkdarling.com/ </a>"
             },
             {
                 "id": 20,
-                "type": "Digital",
+                "type": "",
                 "title": "Pockets Webdesign",
                 "src": img20,
                 'desc': "I designed the website for the company consultant Pockets during my training in Euphorika."
@@ -347,19 +356,19 @@ alert()
         images = [
             {
                 "id": 21,
-                "type": "Blender",
+                "type": "",
                 "title": "3D Devil",
                 "src": img21,
                 'desc': 'I created this devil with VR glasses in the program Oculus Medium. The details on 3D Blender.'
             },
             {
                 "id": 22,
-                "type": "Blender",
+                "type": "",
                 "title": "Silver Fences",
                 "src": img22,
                 'desc': 'It was created by myself and it was my first experience with 3D Blender.'
             },
-            {"id": 23, "type": "Blender", "title": "Liquid Silver texture", "src": img23, 'desc': ''},
+            {"id": 23, "type": "", "title": "Liquid Silver texture", "src": img23, 'desc': ''},
 
         ];
         this.setState({blender: this.createListView(images, 3)})
@@ -376,7 +385,7 @@ alert()
             <BrowserRouter>
                 <div className="">
                     {
-                        (this.state.isnavtoggled === true) ?
+                        (this.state.isnavtoggled === true && this.state.width<756) ?
                             <div style={{visibility: 'hidden'}}>
 
 
@@ -539,7 +548,7 @@ alert()
                                             </div>
                                         </div>
 
-                                        <div className="h5"
+                                        <div className="h5 mb-5"
                                              style={{position: 'fixed', bottom: 0, left: 'calc(50vw - 59.02px / 2)'}}>
                                             {this.state.lang ?
                                                 <span>

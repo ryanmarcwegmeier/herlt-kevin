@@ -46,11 +46,11 @@ export default class HomeIntro extends Component {
                  <div className="flexrow " style={{height:'100vh', minHeight:'500px'}}>
                  <div className="flexcol5 mt-3 flex-h-center">
                     <section className="introText marginTop">
-                        <h2 className="mb-5">{Helper.translate("I'm",this.props.lang)} <b>Kevin Herlt</b></h2>
+                        <h2 className="mb-5">{Helper.translate("I'm",this.props.lang)} <b>Kevin Herlt,</b></h2>
                         <p style={{lineHeight:'2em'}}>
 
                         {
-                            Helper.translate('a graphicdesigner with passion and love for detail. My journey as a designer startet in an agile creative agency in Hamburg. Enjoy this glimpse of my creative endevours and get to know the man behind the keyboard.', this.props.lang)
+                          Helper.translate('a graphicdesigner with passion and love for detail. My journey as a designer started in an agile creative agency in Hamburg. Enjoy this glimpse of my creative endevours and get to know the man behind the keyboard.', this.props.lang)
                         }
 
                         </p>

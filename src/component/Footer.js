@@ -15,11 +15,8 @@ export default class Footer extends Component {
                 <div className="footerNav">
                     <section className="text-dark p-5">
                     <h3 className="pb-2"><span style={{letterSpacing: '3px'}}>{Helper.translate("CONTACT",this.props.lang)}</span> </h3>
-                    <div>
-                    {Helper.translate("I am always looking for new adventures and challenges. So if you are interested, just drop me a quick line and I will get in contact with you.",this.props.lang)}    
-                    </div>
-                    <div className="pt-5">
-                    {Helper.translate("Looking forward,",this.props.lang)}    
+                    <div style={{width:'50%'}}>
+                    {Helper.translate("I am always looking for new adventures and challenges. So if you are interested, just drop me a quick line and I will get in contact with you.",this.props.lang)}
                     </div>
                     <div className="pt-2 pb-5 mb-2">
                         <b>
@@ -27,20 +24,7 @@ export default class Footer extends Component {
                         </b>
                     </div>
 
-                    <section>
-                        <div className="pt-3">
-                            Kevin Herlt
-                        </div>
-                        <div className="pt-3">
-                            Sandweg 2e
-                        </div>
-                        <div className="pt-3">
-                            21509 Glinde
-                        </div>
-                        <div className="pt-3">
-                            {Helper.translate("Germany",this.props.lang)}
-                        </div>
-                    </section>
+
                   
                     {window.innerWidth>=490 ?
                     <table className="mt-3" style={{borderCollapse:'separate', borderSpacing: '0 1em'}}>
@@ -97,7 +81,7 @@ export default class Footer extends Component {
                     }
                     </section>
 
-                    <div className="text-center text-light pb-3">
+                    <div className="text-center text-dark pb-3">
 
                     {window.innerWidth>=490 &&
                     
@@ -106,11 +90,11 @@ export default class Footer extends Component {
                 <NavLink exact to="/privacypolicy" onClick={()=>goToTop()}>
                   {(this.props.path==='/privacypolicy' )
                   ?
-                  <span className="m-4 selectedw text-light">
+                  <span className="m-4 selectedw text-dark">
                   {Helper.translate("PRIVACYPOLICY",this.props.lang)}
                   </span>                  
                   :
-                    <span className="m-4 text-light">
+                    <span className="m-4 text-dark">
                     {Helper.translate("PRIVACYPOLICY",this.props.lang)}
                     </span>                  
                     }
@@ -120,11 +104,11 @@ export default class Footer extends Component {
                 <NavLink exact to="/imprint"  onClick={()=>goToTop()}>
                   {(this.props.path==='/imprint' )
                   ?
-                  <span className="p-m selectedw text-light">
+                  <span className="p-m selectedw text-dark">
                   {Helper.translate("IMPRINT",this.props.lang)}
                   </span>                  
                   :
-                    <span className="m-4 text-light">
+                    <span className="m-4 text-dark">
                     {Helper.translate("IMPRINT",this.props.lang)}
                     </span>                  
                     }
@@ -133,10 +117,10 @@ export default class Footer extends Component {
                     </span>
                     }
                         <span className="m-4 text-light">
-                        <a target="_blank" className="text-light" href="https://www.instagram.com/kxvinpinoy/">INSTAGRAM</a> 
+                        <a target="_blank" className="text-dark" href="https://www.instagram.com/kxvinpinoy/">INSTAGRAM</a>
                         </span>
                         <span className="m-4 text-light">
-                        <a target="_blank" className="text-light" href="https://www.xing.com/profile/Kevin_Herlt2/cv?sc_o=mxb_p">XING</a>
+                        <a target="_blank" className="text-dark" href="https://www.xing.com/profile/Kevin_Herlt2/cv?sc_o=mxb_p">XING</a>
                         </span>
                     </div>
 

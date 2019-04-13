@@ -41,12 +41,7 @@ export default class ImageModal extends Component{
             
             <div className="ml-auto mr-4">
             
-            {
-                this.state.small?
-                <i className="fas fa-expand mr-4" onClick={this.handleBig}></i>
-                :
-                <i className="fas fa-compress mr-4" onClick={this.handleSmall}></i>
-            }
+
             {/* <a href={this.props.imgUrl} download style={{textDecoration:'none', color:'#f8f9fa'}}>
             <i class="fas fa-download mr-4"></i>
             </a> */}
@@ -77,16 +72,16 @@ export default class ImageModal extends Component{
                 }
                 
                 {this.state.small?
-                    <div className="col-md-6 p-3" style={{overflow:"scroll"}}>
+                    <div className="col-md-6 p-3" style={{overflow:"hidden"}}>
                     <h5 className="p-1"><u>{Helper.translate(this.props.imgType,this.props.lang)}</u></h5>
-                    <h4 className="p-1">{Helper.translate(this.props.imgTitle,this.props.lang)}</h4>
+                    <h4 className="p-1 ml-3 mr-3">{Helper.translate(this.props.imgTitle,this.props.lang)}</h4>
                     <div className="flexrow" style={{height:"100%"}}>
                     {
                          window.innerWidth>=768?
                         <div className="flexcol1 flex-v-center p-1 pr-2" style={{"marginTop":"-40%"}}>
                             {ReactHtmlParser(Helper.translate(this.props.imgDes,this.props.lang))} 
                         </div>:
-                        <div className="flexcol1 flex-v-center p-1 pb-3">
+                        <div className="flexcol1 flex-v-center p-1 ml-3 mr-3 pb-3 mb-5">
                             {ReactHtmlParser(Helper.translate(this.props.imgDes,this.props.lang))} 
                         </div>                    
                     }

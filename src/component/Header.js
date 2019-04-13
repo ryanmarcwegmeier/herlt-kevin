@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import '../styles/container.css';
 import '../styles/header.css';
+import Helper from './Helper';
 import logo from '../images/kevin-logo.png';
 
 
@@ -32,8 +33,8 @@ export default class Header extends Component{
                 </div>
                 </div>
                 {window.innerWidth>=756 &&
-                <div className="flexcol1 flex-v-center flex-h-center title" style={{letterSpacing:'3px', fontSize:'0.8em',color:'#505050'}}>
-                GRAPHICDESIGNER
+                <div className="flexcol2 flex-v-center flex-h-center title" style={{letterSpacing:'3px', fontSize:'0.8em',color:'#505050'}}>
+                    {Helper.translate("GRAPHIC DESIGNER", this.props.lang)}
                     
                     
                 </div>

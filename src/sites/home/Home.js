@@ -39,9 +39,7 @@ export default class Home extends Component {
 
 
     onEnterViewport(path) {
-
         this.props.setPath(path)
-
     }
 
     onExitViewport(path) {
@@ -106,8 +104,10 @@ export default class Home extends Component {
                     <div>
 
                         <ScrollTrigger onEnter={() => this.onEnterViewport("/#contact")}>
-
-                            <Footer setPath={this.props.setPath} lang={this.props.lang} path={this.props.path}></Footer>
+                            <div className={"pt-5"}>
+                                <Footer setPath={this.props.setPath} lang={this.props.lang}
+                                        path={this.props.path}></Footer>
+                            </div>
                         </ScrollTrigger>
 
                     </div>
